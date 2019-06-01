@@ -45,8 +45,7 @@ The first steps you want to perform is to install **Git**.
 #### Create a Local Git Repository via GitHub Desktop 
 1. Activate the Git Desktop client.
 1. From the File drop-down menu, select **Create a New Repository**
-1. In the popup dialog window enter the required information. The following picture shows an examnple:
-![create local repository](../Resources/Images/Git/create_local_repository.png)  
+1. In the popup dialog window enter the required information. 
 1. Click the **Create Repository** button. 
 1. Click the **preferences** link and enter your GitHub account information. For more information, see
 <a href="https://help.github.com/en/desktop/getting-started-with-github-desktop/configuring-git-for-github-desktop">Configuring Git for GitHub Desktop</a>.
