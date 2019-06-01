@@ -52,9 +52,10 @@ The first steps you want to perform is to install **Git**.
 4. Click the **Create Repository** button. This is an example of the results:
 <img src="https://docs.google.com/uc?export=download&id=1froY4268BZq8jZ0XERZJj0CqZw7Qbx2B" width="400"/>
 5. Click the **preferences** link and enter your GitHub account information. For more information, see
-[Configuring Git for GitHub Desktop](https://help.github.com/en/desktop/getting-started-with-github-desktop/configuring-git-for-github-desktop).
+<a href="https://help.github.com/en/desktop/getting-started-with-github-desktop/configuring-git-for-github-desktop">Configuring Git for GitHub Desktop</a>.
 6. Configure your default editor. We have selected *VS Code* for our examples, as shown in the next picture. For more information, see 
-[Configuring a default editor](https://help.github.com/en/desktop/getting-started-with-github-desktop/configuring-a-default-editor).
+<a href="https://help.github.com/en/desktop/getting-started-with-github-desktop/configuring-a-default-editor">Configuring a default editor</a>.
+
 <img src="https://docs.google.com/uc?export=download&id=1HK7gxt-LVSu12dy1-LxOkJ6umsvxxDWn" width="400"/>
 
 #### Publish Local Git Repository to GitHub 
@@ -297,11 +298,7 @@ Let's assume that we are done modifying the *GitNotes.md* file. We need now to m
 
 1. In the top bar menu click **Branch**.
 1. From the drop-down list select **Create Pull Request**. 
-<<<<<<< HEAD
-1. If a pop-up is displayed asking for publishing the changes in commit, click the related button **Push Commits**. 
-=======
-1. If a pop-up is displayed asking for publishing the changes in commit, click the related button. 
->>>>>>> b6b493a5f0a23a90a832509c4ce17ba629614904
+1. If a pop-up is displayed asking for publishing the changes in commit, click the button **Push Commits**. 
 1. A window is open in your browser showing the changes you made on your remote GitHub repository. 
 1. Click **Create pull request**.  
 1. In the next window, click **Merge pull request**. 
