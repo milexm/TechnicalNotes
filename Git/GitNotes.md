@@ -272,14 +272,27 @@ The **commit** object contains the directory tree object hash, parent commit has
 
 ## Branching 
 
-If you want to create a new feature, you do not make changes to the main project. This is where **branches** come in. 
+If you want to create a new feature, you do not make changes to the main project. This is what the **branches** are for. 
 Branches allow you to move back and forth between project states. Once you're done with the new feature, you can merge your changes from your branch into the master branch. 
 
-<div class="warning">When you create a new branch, Git keeps track of which commit your branch 'branched' off of, so it knows the history behind all the files.</div> 
+<div class="warning">When you create a new branch, Git keeps track of which commit your branch 'branched' from, so it knows the history behind all the files.</div> 
 
 Let's see the steps involved when branching, using this very file *GitNotes.md*. 
 
+### Create a Branch
 
+1. In the bar menu click **Branch**.
+1. From the drop-down list select **New Branch**.  
+1. In the pop-up dialog enter the name of the branch, for example *wips* for work in progress. <span class="m_warning">Assure to select the *master* to start something new or another branch, if you need to build on the work done in the branch.</span>
+1. Click **Create Branch**.
+1. Now you are in the **wips** branch.
+1. You can change the *GitNotes.md* file. These changes are automatically picked up by the GitHub client and belong to the *wips* branch. Notice that we had already created the *wips* branch before starting this list, so the changes refer to the entire list.    
+1. At the bottom of the left pane, enter a comment and then click **Commit to wips**. <span class="m_info">You can continue changing the file until it is ready to be merged into the master branch.</span>    
+
+### Merge with Master
+Let's assume that we are done modifying the *GitNotes.md* file. We need now to merge the changes into the **master** branch as described next.
+
+1. dd 
 
 
 ## <a name="cmd_ref"></a> Git Command Reference
