@@ -22,10 +22,11 @@ To shorten your GitHub address go to [https://git.io/](https://git.io/).
 
 
 ## Table of Content
-- [Git](#git) 
-	- [Git Getting Started](#git_start)
-	- [What is Git?](#git?)
-	- [Git Internals](#git_intern)
+
+- [Git Getting Started](#git)
+- [What is Git?](#git?)
+- [Git Internals](#git_intern)
+- [Git Branches](#branches)
 - [Glossary](#glos)
 - [References](#ref)
 - [Appendix](#appendix)
@@ -33,10 +34,9 @@ To shorten your GitHub address go to [https://git.io/](https://git.io/).
 
 
 
-## <a id="git"></a>Git
+## <a id="git"></a>Git Getting Started
 <b>Git</b> is a revision control system, a <b>tool</b> to manage your source code history
 
-### <a id="git_start"></a>Git Getting Started 
 The first steps you want to perform is to install **Git**.  
 
 1. We reccomend you install the GitHub Desktop client from this location: [GitHub Desktop](https://desktop.github.com/). This tool provides a very friendly GUI and a seamless integration with your GitHub repositories. So, go for it!! For more information, see [GitHub Desktop Documentation](https://help.github.com/en/desktop).
@@ -268,7 +268,7 @@ The **commit** object contains the directory tree object hash, parent commit has
 	Date:   Tue May 14 18:22:21 2019 -0700
 	First commit.
 
-## Branching 
+## <a name="branches"></a> Git Branches 
 
 If you want to create a new feature, you do not make changes to the main project. This is what the **branches** are for. 
 Branches allow you to move back and forth between project states. Once you're done with the new feature, you can merge your changes from your branch into the master branch. 
@@ -283,10 +283,10 @@ Let's see the steps involved when branching, using this very file *GitNotes.md*.
 1. From the drop-down list select **New Branch**.  
 1. In the pop-up dialog enter the name of the branch, for example *wips* for work in progress. <span class="m_warning">Assure to select the *master* to start something new or another branch, if you need to build on the work done in the branch.</span>
 1. Click **Create Branch**.
-1. Now you are in the **wips** branch.
+1. Now you are in the **wips** branch. <span class="m_info">If a branch already exists the mere fact of selecting it tells Git that the changes you make belong to the selected branch.</span> 
 1. You can change the *GitNotes.md* file. These changes are automatically picked up by the GitHub client and belong to the *wips* branch. Notice that we had already created the *wips* branch before starting this list, so the changes refer to the entire list.    
 1. At the bottom of the left pane, enter a comment and then click **Commit to wips**. <span class="m_info">You can continue changing the file until it is ready to be merged into the master branch.</span>  
-1. Push the changes to the remote repository by clicking the **Pust origin** button.      
+1. Push the changes to the remote repository by clicking the **Push origin** button.      
 
 ### Merge with Master
 Let's assume that we are done modifying the *GitNotes.md* file. We need now to merge the changes into the **master** branch as described next.
