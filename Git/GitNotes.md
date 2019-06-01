@@ -281,18 +281,26 @@ Let's see the steps involved when branching, using this very file *GitNotes.md*.
 
 ### Create a Branch
 
-1. In the bar menu click **Branch**.
+1. In the top bar menu click **Branch**.
 1. From the drop-down list select **New Branch**.  
 1. In the pop-up dialog enter the name of the branch, for example *wips* for work in progress. <span class="m_warning">Assure to select the *master* to start something new or another branch, if you need to build on the work done in the branch.</span>
 1. Click **Create Branch**.
 1. Now you are in the **wips** branch.
 1. You can change the *GitNotes.md* file. These changes are automatically picked up by the GitHub client and belong to the *wips* branch. Notice that we had already created the *wips* branch before starting this list, so the changes refer to the entire list.    
-1. At the bottom of the left pane, enter a comment and then click **Commit to wips**. <span class="m_info">You can continue changing the file until it is ready to be merged into the master branch.</span>    
+1. At the bottom of the left pane, enter a comment and then click **Commit to wips**. <span class="m_info">You can continue changing the file until it is ready to be merged into the master branch.</span>  
+1. Push the changes to the remote repository by clicking the **Pust origin** button.      
 
 ### Merge with Master
 Let's assume that we are done modifying the *GitNotes.md* file. We need now to merge the changes into the **master** branch as described next.
 
-1. dd 
+1. In the top bar menu click **Branch**.
+1. From the drop-down list select **Create Pull Request**. 
+1. If a pop-up is displayed asking for publishing the changes in commit, click the related button. 
+1. A window is open in your browser showing the changes you made on your remote GitHub repository. 
+1. Click **Create pull request**.  
+1. In the next window, click **Merge pull request**. 
+1. Leave a comment.
+1. Click **Confirm Merge**.
 
 
 ## <a name="cmd_ref"></a> Git Command Reference
