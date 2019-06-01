@@ -525,7 +525,9 @@ Notice the file **GitGitHubNotes.md** is the same file we are working on right n
 ## Custom Styles
 <div class="danger">Keep this section. It contains custom styles. To see the styles switch this section to edit mode.</div> 
 
-<style>
+(setq markdown-xhtml-header-content
+
+"<style>
 /* Custom Markdown styles */
 
 /* Note Red */
@@ -582,6 +584,6 @@ Notice the file **GitGitHubNotes.md** is the same file we are working on right n
 .m_danger {
   background-color: #ffdddd;
 }
-</style>
+</style>")
 
   
