@@ -286,7 +286,7 @@ Let's see the steps involved when branching, using this very file *GitNotes.md*.
 1. Now you are in the **wips** branch. <span class="m_info">If a branch already exists the mere fact of selecting it tells Git that the changes you make belong to the selected branch.</span> 
 1. You can change the *GitNotes.md* file. These changes are automatically picked up by the GitHub client and belong to the *wips* branch. Notice that we had already created the *wips* branch before starting this list, so the changes refer to the entire list.    
 1. At the bottom of the left pane, enter a comment and then click **Commit to wips**. <span class="m_info">You can continue changing the file until it is ready to be merged into the master branch.</span>  
-1. Push the changes to the remote repository by clicking the **Pust origin** button.      
+1. Push the changes to the remote repository by clicking the **Push origin** button.      
 
 ### Merge with Master
 Let's assume that we are done modifying the *GitNotes.md* file. We need now to merge the changes into the **master** branch as described next.
