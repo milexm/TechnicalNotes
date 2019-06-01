@@ -42,21 +42,17 @@ The first steps you want to perform is to install **Git**.
 1. We reccomend you install the GitHub Desktop client from this location: [GitHub Desktop](https://desktop.github.com/). This tool provides a very friendly GUI and a seamless integration with your GitHub repositories. So, go for it!! For more information, see [GitHub Desktop Documentation](https://help.github.com/en/desktop).
 1. Alternatively, you can install the Git command line tool, refer to [Getting Started - Installing Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git). 
 
-#### Create a Local Git Repository via GitHub Desktop
+#### Create a Local Git Repository via GitHub Desktop 
 1. Activate the Git Desktop client.
-2. From the File drop-down menu, select **Create a New Repository**
-3. In the popup dialog window enter the required information. The following picture shows an examnple:
-
+1. From the File drop-down menu, select **Create a New Repository**
+1. In the popup dialog window enter the required information. The following picture shows an examnple:
 ![create local repository](../Resources/Images/Git/create_local_repository.png)  
-
-4. Click the **Create Repository** button. This is an example of the results:
-<img src="https://docs.google.com/uc?export=download&id=1froY4268BZq8jZ0XERZJj0CqZw7Qbx2B" width="400"/>
-5. Click the **preferences** link and enter your GitHub account information. For more information, see
+1. Click the **Create Repository** button. 
+1. Click the **preferences** link and enter your GitHub account information. For more information, see
 <a href="https://help.github.com/en/desktop/getting-started-with-github-desktop/configuring-git-for-github-desktop">Configuring Git for GitHub Desktop</a>.
-6. Configure your default editor. We have selected *VS Code* for our examples, as shown in the next picture. For more information, see 
+6. Configure your default editor. We have selected *VS Code* for our examples. For more information, see 
 <a href="https://help.github.com/en/desktop/getting-started-with-github-desktop/configuring-a-default-editor">Configuring a default editor</a>.
 
-<img src="https://docs.google.com/uc?export=download&id=1HK7gxt-LVSu12dy1-LxOkJ6umsvxxDWn" width="400"/>
 
 #### Publish Local Git Repository to GitHub 
 
