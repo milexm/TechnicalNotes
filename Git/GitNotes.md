@@ -297,7 +297,11 @@ Let's assume that we are done modifying the *GitNotes.md* file. We need now to m
 
 1. In the top bar menu click **Branch**.
 1. From the drop-down list select **Create Pull Request**. 
+<<<<<<< HEAD
 1. If a pop-up is displayed asking for publishing the changes in commit, click the related button **Push Commits**. 
+=======
+1. If a pop-up is displayed asking for publishing the changes in commit, click the related button. 
+>>>>>>> b6b493a5f0a23a90a832509c4ce17ba629614904
 1. A window is open in your browser showing the changes you made on your remote GitHub repository. 
 1. Click **Create pull request**.  
 1. In the next window, click **Merge pull request**. 
