@@ -17,7 +17,9 @@ They are not the same thing: <span style="color:red; font-weight:bold">Git is th
 
 To shorten your GitHub address go to [https://git.io/](https://git.io/). 
 
-<img src="https://raw.githubusercontent.com/milexm/git-notes/master/images/git_github.png" width="400"/>
+
+<img src="https://min.gitcdn.link/repo/milexm/TechnicalNotes/master/Resources/Images/GitHub/git_github.png" width="400"/>
+
 
 ## Table of Content
 - [Git](#git) 
@@ -89,7 +91,7 @@ Git is very efficient. Most operations are local, which reduces unnecessary netw
  
 After creating a repository, you do your work in the working tree. Once your work reaches a significant point, you add your changes successively to the index (stage). Once the index contains everything you intend to commit, you record its content in the repository. Here’s a simple diagram that shows a typical project’s life-cycle: 
 
-![basic_life_cycle](images/basic_life_cycle.png)
+![basic_life_cycle](../Resources/Images/Git/basic_life_cycle.png)
 
 ### A Toolkit Design
 Git is not a single binary, but a collection of small specialized programs, which sometimes is annoying to people trying to learn Git, but is very useful when you want to do anything nonstandard with it. 
@@ -101,20 +103,6 @@ The tools can be more or less divided into two major categories, often referred 
 1. The **plumbing porgrams** are not meant to be used via the command line, but rather to help performing tasks flexibly. They are combined by programs and scripts into porcelain programs. 
 1. The **porcelain programs** are largely what we are focusing on as user-oriented interfaces. 
 
-### Git Object Types
-Git objects contain the actual data, they represent the main entities that make up the repository. <div class="warning">There are **four main object types**, the first three being the most important to really understand the main functions. All of these types of objects are stored in the **Git objects** folder, which is kept in the **.git directory**.</div>
-Each object is compressed (with Zlib) and referenced by the SHA-1 value of its contents plus a small header. In the examples, we will use the first 6 characters of the SHA-1 for simplicity, but the actual value is 40 characters long.
-
-<div class="info"><a ="http://en.wikipedia.org/wiki/SHA1">[SHA]</a> stands for <b>Secure Hash Algorithm</b>. A SHA creates an identifier of fixed length that uniquely identifies a specific piece of content. It is the most commonly used
-algorithm.</div>
-
-![git objects](images/git_objects.png)
-
-#### The Blob
-In Git, the contents of files are stored as blobs which are identified by the related SHA code, as shown in the previous figure. 
-<div class="warning">It is important to note that the contents are stored, not the files.  The names and modes of the files are not stored with the blob, <b style="color:red">just the contents</b>.
-</div>
-This means that if you have two files anywhere in your project that are exactly the same, even if they have different names, Git will only store the blob once. This also means that during repository transfers, such as clones or fetches, Git will  only transfer the blob once, then expand it out into multiple files upon checkout.
 
 ## <a id="git_intern"></a> Git Internals
 Let's explore some of Git internals to better understand its mechanincs and fundamentals. 
@@ -139,7 +127,7 @@ Internally, Git has a very similar structure of a file system, with a couple of 
 
 The following picture shows an example of the Git tree structure.
 
-![git objects](images/git_objects.png)
+![git objects](../Resources/Images/Git/git_objects.png)
 
 The difference between a Git blob and a filesystem’s file is that a blob does not store metadata about its content. The information is kept in the tree that holds the blob. 
 
@@ -203,7 +191,7 @@ Let's check what has been stored in the repository so far.
 		071840102a42f43d0bf6bcf714ab63643dda2b
 	
 	This is shown in the following picture. 	
-	![git objects](images/git_objects.png)
+	![git objects](../Resources/Images/Git/git_objects.png)
 	
 1. Check what kind of objects have been stored.
 
@@ -281,6 +269,18 @@ The **commit** object contains the directory tree object hash, parent commit has
 	Author: Michael <milexm@gmail.com>
 	Date:   Tue May 14 18:22:21 2019 -0700
 	First commit.
+
+## Branching 
+
+If you want to create a new feature, you do not make changes to the main project. This is where **branches** come in. 
+Branches allow you to move back and forth between project states. Once you're done with the new feature, you can merge your changes from your branch into the master branch. 
+
+<div class="warning">When you create a new branch, Git keeps track of which commit your branch 'branched' off of, so it knows the history behind all the files.</div> 
+
+Let's see the steps involved when branching, using this very file *GitNotes.md*. 
+
+
+
 
 ## <a name="cmd_ref"></a> Git Command Reference
 The following are some of the most commonly used Git comamnds. For more information, see [Git Reference](https://git-scm.com/docs).

@@ -103,22 +103,21 @@ The following is the result:
 <img src="../Resources/Images/Markdown/macdown.png" align="center" width="200"/>
 </div>
 
+
 ### Remote Reference
 You can refer to an image stored in GitHub remotely by using the image raw url format as shown next.
 
-1. From your GitHub repository, get the image URL, as in this example: `https://github.com/milexm/git-notes/blob/master/images/git_github_icon.png`
-1. Modify the URL to the **raw url format**, as in this example: `https://raw.github.com/milexm/git-notes/master/images/git_github_icon.png`. 
+1. From your GitHub repository, get the image URL, as in this example: `hhttps://github.com/milexm/TechnicalNotes/blob/master/Resources/Images/GitHub/git_github_icon.png`
+1. Modify the URL to the **raw url format**, as in this example: `https://raw.github.com/milexm/TechnicalNotes/master/Resources/Images/GitHub/git_github_icon.png`. 
 Use the above raw URL to refer to the inmage, as in this example: 
-<img src="https://raw.github.com/milexm/git-notes/master/images/git_github_icon.png"/>
+<img src="https://raw.github.com/milexm/TechnicalNotes/master/Resources/Images/GitHub/git_github_icon.png"/>
 
 A better way to use raw URL, for any file type not only images, is to <span class="m_warning">use the [GitCDN](https://min.gitcdn.link/) service which serves raw files directly from GitHub</span> with proper Content-Type headers and a super fast CDN! 
-As in this example: `<img src="https://min.gitcdn.link/repo/milexm/git-notes/master/images/git_github_icon.png"/>`
+As in this example: `<img src="https://min.gitcdn.link/repo/milexm/TechnicalNotes/master/Resources/Images/GitHub/git_github_icon.png"/>`
 
-<img src="https://min.gitcdn.link/repo/milexm/git-notes/master/images/git_github_icon.png"/>
+<img src="https://min.gitcdn.link/repo/milexm/TechnicalNotes/master/Resources/Images/GitHub/git_github_icon.png"/>
 
-<div class="info">Notice that once you know the URL link for the GitCDN applicable to your repository you can just substitute the name of a new file, as in this example:</div>
-
-`https://min.gitcdn.link/repo/milexm/git-notes/master/images/new_file_name"`.
+<div class="info">Notice that once you know the URL link for the GitCDN applicable to your repository such as <span class="m_other">https://min.gitcdn.link/repo/milexm/</span> you can just add the path of the file such as <span class="m_other">TechnicalNotes/master/Resources/Images/GitHub/git_github_icon.png</span>.</div>
 
 
 For more info, see [github picture path
