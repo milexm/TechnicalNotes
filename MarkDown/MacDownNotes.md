@@ -1,3 +1,4 @@
+<link href="../Css/custom.css" rel="stylesheet"></link> 
 <div align="center">
 <img src="../Resources/Images/Markdown/macdown.png" align="center" width="100"/>
 </div>
@@ -11,7 +12,22 @@ You can find useful setting information here: [Best Markdown Editors for OS X](h
 Custom styles are not easy to implement across platforms. In the case of Jupyter Notebooks, you can create a **.custom.css** file that is associated with your markdown files. But this is only valid on your machine. 
 The story is different if you want to apply custom styles on a public platform such Anaconda cloud or GitHub.
 
-On GitHub, for security reasons, you are not allowed to use any css style file remote or otherwise. The best way is to include the style in the markdown file as you can see next if you edit the file. 
+On GitHub, for security reasons, you are not allowed to use any css style file remote or otherwise. You cannot even include the style tag. 
+
+To summarize:
+
+1. In a markdown file you can link to a css file,  that is stored locally, at the top of the markdown file as follows:
+`<link href="../Css/custom.css" rel="stylesheet"></link>`
+1. In a jupyter notebook file you can link to a css file that is stored locally as follows:
+
+		from IPython.core.display import HTML
+			def set_css_style(css_file_path):
+				styles = open(css_file_path, "r").read()
+				return HTML(styles)
+
+		set_css_style('../Css/custom.css')
+
+<div class="danger">All this does not work in GitHub, this is because GitHub does not allow the style tag for security reasons. </div>
 
 ### Style Examples
 
@@ -32,65 +48,6 @@ On GitHub, for security reasons, you are not allowed to use any css style file r
 <div class="info">Info</div>
 <div class="other">Other</div>
 
-<style>
-/* Custom Markdown styles */
-
-/* Note Red */
-.danger {
-  background-color: #ffdddd;
-  border-left: 6px solid #f44336;
-}
-
-/* Note Green */
-.success {
-  background-color: #ddffdd;
-  border-left: 6px solid #4caf50;
-}
-
-/* Note Blue */
-.info {
-  background-color: #e7f3fe;
-  border-left: 6px solid #2196f3;
-}
-
-/* Note Yellow */
-.warning {
-  background-color: #ffffcc;
-  border-left: 6px solid #ffeb3b;
-}
-
-/* Note Gray */
-.other {
-  background-color: #e7e7e7;
-  border-left: 6px solid #696965;
-}
-
-/* Marker Yellow */
-.m_warning {
-  background-color: yellow;
-}
-
-/* Marker Gray */
-.m_other {
-  background-color: lightgray;
-}
-
-/* Marker Blue */
-.m_info {
-  background-color: lightblue;
-}
-
-/* Marker Green */
-.m_success {
-  background-color: #ddffdd;
-}
-
-/* Marker Orange */
-.m_danger {
-  background-color: #ffdddd;
-}
-</style>
-
 
 ## Images
 The best way to keep everithing together, is to create an images folder in the same location where you keep your markdown file(s). Then publish the folder along witht the markdown file.
@@ -107,17 +64,11 @@ The following is the result:
 ### Remote Reference
 You can refer to an image stored in GitHub remotely by using the image raw url format as shown next.
 
-1. From your GitHub repository, get the image URL, as in this example: `hhttps://github.com/milexm/TechnicalNotes/blob/master/Resources/Images/GitHub/git_github_icon.png`
+1. From your GitHub repository, get the image URL, as in this example: `https://github.com/milexm/TechnicalNotes/blob/master/Resources/Images/GitHub/git_github_icon.png`
 1. Modify the URL to the **raw url format**, as in this example: `https://raw.github.com/milexm/TechnicalNotes/master/Resources/Images/GitHub/git_github_icon.png`. 
 Use the above raw URL to refer to the inmage, as in this example: 
+
 <img src="https://raw.github.com/milexm/TechnicalNotes/master/Resources/Images/GitHub/git_github_icon.png"/>
-
-A better way to use raw URL, for any file type not only images, is to <span class="m_warning">use the [GitCDN](https://min.gitcdn.link/) service which serves raw files directly from GitHub</span> with proper Content-Type headers and a super fast CDN! 
-As in this example: `<img src="https://min.gitcdn.link/repo/milexm/TechnicalNotes/master/Resources/Images/GitHub/git_github_icon.png"/>`
-
-<img src="https://min.gitcdn.link/repo/milexm/TechnicalNotes/master/Resources/Images/GitHub/git_github_icon.png"/>
-
-<div class="info">Notice that once you know the URL link for the GitCDN applicable to your repository such as <span class="m_other">https://min.gitcdn.link/repo/milexm/</span> you can just add the path of the file such as <span class="m_other">TechnicalNotes/master/Resources/Images/GitHub/git_github_icon.png</span>.</div>
 
 
 For more info, see [github picture path
