@@ -524,10 +524,16 @@ Notice the file **GitGitHubNotes.md** is the same file we are working on right n
 
 1. 
   
+<<<<<<< HEAD
+=======
+<div style="background-color: #ffdddd; border-left: 6px solid #f44336;">Test style</div>
+  
+>>>>>>> 006a5232e59110087b69e4ad2864d83bb44a85f5
   
 ## Custom Styles
 <div class="danger">Keep this section. It contains custom styles. To see the styles switch this section to edit mode.</div> 
 
+<<<<<<< HEAD
 
 
 <div class="danger">Danger</div>
@@ -540,3 +546,65 @@ Notice the file **GitGitHubNotes.md** is the same file we are working on right n
 
 <span class="m_danger">Danger</span>
 
+=======
+<style>
+/* Custom Markdown styles */
+
+/* Note Red */
+.danger {
+  background-color: #ffdddd;
+  border-left: 6px solid #f44336;
+}
+
+/* Note Green */
+.success {
+  background-color: #ddffdd;
+  border-left: 6px solid #4caf50;
+}
+
+/* Note Blue */
+.info {
+  background-color: #e7f3fe;
+  border-left: 6px solid #2196f3;
+}
+
+/* Note Yellow */
+.warning {
+  background-color: #ffffcc;
+  border-left: 6px solid #ffeb3b;
+}
+
+/* Note Gray */
+.other {
+  background-color: #e7e7e7;
+  border-left: 6px solid #696965;
+}
+
+/* Marker Yellow */
+.m_warning {
+  background-color: yellow;
+}
+
+/* Marker Gray */
+.m_other {
+  background-color: lightgray;
+}
+
+/* Marker Blue */
+.m_info {
+  background-color: lightblue;
+}
+
+/* Marker Green */
+.m_success {
+  background-color: #ddffdd;
+}
+
+/* Marker Orange */
+.m_danger {
+  background-color: #ffdddd;
+}
+</style>
+
+  
+>>>>>>> 006a5232e59110087b69e4ad2864d83bb44a85f5
