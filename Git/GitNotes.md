@@ -1,6 +1,9 @@
+<link href="../Css/custom.css" rel="stylesheet"></link>
+
 <center>
 <img src="../Resources/Images/Git/git.png" width="400"/>  
 </center>  
+
 
 # Git Notes
 <b>Git</b> is a revision control system, a <b>tool</b> to manage your source code history on your local machine. 
@@ -18,7 +21,7 @@ They are not the same thing: <span style="color:red; font-weight:bold">Git is th
 To shorten your GitHub address go to [https://git.io/](https://git.io/). 
 
 
-<img src="https://min.gitcdn.link/repo/milexm/TechnicalNotes/master/Resources/Images/GitHub/git_github.png" width="400"/>
+<img src="https://raw.github.com/milexm/TechnicalNotes/master/Resources/Images/GitHub/git_github.png" width="400"/> 
 
 
 ## Table of Content
@@ -521,69 +524,15 @@ Notice the file **GitGitHubNotes.md** is the same file we are working on right n
 
 1. 
   
-<div style="background-color: #ffdddd; border-left: 6px solid #f44336;">Test style</div>
-  
   
 ## Custom Styles
-<div class="danger">Keep this section. It contains custom styles. To see the styles switch this section to edit mode.</div> 
+<div class="danger">Keep this section. It contains custom styles. To see the styles switch this section to edit mode.</div>     
+<br/>
+<div class="danger">Danger</div>
+<div class="warning">Warning</div>
+<div class="success">Success</div>
+<div class="info">Info</div>
+<div class="other">Other</div>
 
-<style>
-/* Custom Markdown styles */
 
-/* Note Red */
-.danger {
-  background-color: #ffdddd;
-  border-left: 6px solid #f44336;
-}
 
-/* Note Green */
-.success {
-  background-color: #ddffdd;
-  border-left: 6px solid #4caf50;
-}
-
-/* Note Blue */
-.info {
-  background-color: #e7f3fe;
-  border-left: 6px solid #2196f3;
-}
-
-/* Note Yellow */
-.warning {
-  background-color: #ffffcc;
-  border-left: 6px solid #ffeb3b;
-}
-
-/* Note Gray */
-.other {
-  background-color: #e7e7e7;
-  border-left: 6px solid #696965;
-}
-
-/* Marker Yellow */
-.m_warning {
-  background-color: yellow;
-}
-
-/* Marker Gray */
-.m_other {
-  background-color: lightgray;
-}
-
-/* Marker Blue */
-.m_info {
-  background-color: lightblue;
-}
-
-/* Marker Green */
-.m_success {
-  background-color: #ddffdd;
-}
-
-/* Marker Orange */
-.m_danger {
-  background-color: #ffdddd;
-}
-</style>
-
-  
