@@ -16,23 +16,18 @@ The story is different if you want to apply custom styles on a public platform s
 
 On GitHub, for security reasons, you are not allowed to use any css style file remote or otherwise. You cannot even include the style tag.
 
-<<<<<<< HEAD
-To summarize:
+1. In a markdown file you can link to a css file, that is stored locally, at the top of the markdown file as follows:
+   `<link href="../Css/custom.css" rel="stylesheet"></link>`
+1. In a jupyter notebook file you can link to a css file that is stored locally as follows:
 
-=======
+```python
+    from IPython.core.display import HTML
+      def set_css_style(css_file_path):
+        styles = open(css_file_path, "r").read()
+                return HTML(styles)
 
-> > > > > > > wips
-
-1.  In a markdown file you can link to a css file, that is stored locally, at the top of the markdown file as follows:
-    `<link href="../Css/custom.css" rel="stylesheet"></link>`
-1.  In a jupyter notebook file you can link to a css file that is stored locally as follows:
-
-        from IPython.core.display import HTML
-        	def set_css_style(css_file_path):
-        		styles = open(css_file_path, "r").read()
-        		return HTML(styles)
-
-        set_css_style('../Css/custom.css')
+      set_css_style('../Css/custom.css')
+```
 
 <div class="danger">All this does not work in GitHub, this is because GitHub does not allow the style tag for security reasons. </div>
 
