@@ -10,6 +10,8 @@ You can download the tool for frree at [Macdown Website](http://macdown.uranusjr
 You can find useful setting information here: [Best Markdown Editors for OS X](https://www.raywenderlich.com/119949/top-five-markdown-editors).
 You can use also [Visual Studio Code](https://code.visualstudio.com/download) as your markfown editor.
 
+TBD
+
 ## Custom Styles
 
 Custom styles are not easy to implement across platforms. In the case of Jupyter Notebooks, you can create a **.custom.css** file that is associated with your markdown files. But this is only valid on your machine.
