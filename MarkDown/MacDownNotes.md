@@ -5,7 +5,8 @@
 
 # MacDown Notes
 
-> [!NOTE]Some sparse notes about **MacDown**.
+> [!NOTE]
+> Some sparse notes about **MacDown**.
 > You can download the tool for frree at [Macdown Website](http://macdown.uranusjr.com 'Title'). You can find useful setting information here: [Best Markdown Editors for OS X](https://www.raywenderlich.com/119949/top-five-markdown-editors).
 You can use also [Visual Studio Code](https://code.visualstudio.com/download) as your markfown editor.
 
