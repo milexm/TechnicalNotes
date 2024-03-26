@@ -1,7 +1,9 @@
 <img src="Resources/Images/beehive.png" width="50" 
 		alt="beehive"/>   
+
 # Technical Notes
-<i>Personal notes on various technical topics.</i>
+
+*Personal notes on various technical topics*
 
 - [Git Notes](Git/GitNotes.md)
 - [GitHub Notes](GitHub/GitHubNotes.md)
