@@ -7,14 +7,14 @@ This folder contains information about the Visual Studio Code keyboard shortcuts
 **CntL** + **Alt** + **Shft**
 
 
-| Command                          | What              |
+| **Command**                      | **Description**   |
 | ---------------------------------|:-----------------:|
-| **CntL** **Shift** **N** | Open a new window.|
-| **CntL** **+**| Zoom out|
-| **CntL** **-**| Zoom in|
-| **CntL** ****Shift** **`****| Show terminal|
-| **CntL** **B**| Hide file explorer when the explorer window|
-| **CntL** **Shift** **E**| Show file explorer|
+| **Cntl** **Shift** **N** | Open a new window.|
+| **Cntl** **+**| Zoom out|
+| **Cntl** **-**| Zoom in|
+| **Cntl** ****Shift** **`****| Show terminal|
+| **Cntl** **B**| Hide file explorer when the explorer window|
+| **Cntl** **Shift** **E**| Show file explorer|
 ||| 
 
 
