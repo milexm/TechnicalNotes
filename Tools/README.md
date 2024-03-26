@@ -40,4 +40,4 @@ desktop app at this location: [GitHub Desktop](https://desktop.github.com/).
 ## 3. References 
 
 - [Getting started with VS code and download](https://code.visualstudio.com/docs/?dv=win64user)
-- 
+- [Getting started with VS code and download](http://stackoverflow.com){:target="_blank" rel="noopener"}
