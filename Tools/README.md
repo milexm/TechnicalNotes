@@ -1,25 +1,27 @@
 # Tools <!-- omit from toc -->
+
 The **Tools** folder contains information about tools to use to create content for *programming* topics.  
 
-- [GitHub Desktop](#github-desktop)
-- [Visual Studio Code](#visual-studio-code)
-  - [Installed Extensions](#installed-extensions)
-- [References](#references)
+- [1. GitHub Desktop](#1-github-desktop)
+- [2. Visual Studio Code](#2-visual-studio-code)
+  - [2.1. Installed Extensions](#21-installed-extensions)
+- [3. References](#3-references)
 
-## GitHub Desktop
+## 1. GitHub Desktop
+
 ![github_icon](../Resources\Images\GitHub\github_icon.jpg) Focus on what matters
 instead of fighting with Git. Whether you're new to Git or a seasoned user,
 GitHub Desktop simplifies your development workflow. You can download the
 desktop app at this location: [GitHub Desktop](https://desktop.github.com/). 
 
 
-## Visual Studio Code
+## 2. Visual Studio Code
 
 
 [Getting started with VS code and download](https://code.visualstudio.com/docs/?dv=win64user)
 
 
-### Installed Extensions
+### 2.1. Installed Extensions
 
 1. **Markdown All in One**. All you need to write Markdown (keyboard shortcuts,
    table of contents, auto preview and more). [VS Marketplace
@@ -35,7 +37,7 @@ desktop app at this location: [GitHub Desktop](https://desktop.github.com/).
 5. 
 
 
-## References 
+## 3. References 
 
 - [Getting started with VS code and download](https://code.visualstudio.com/docs/?dv=win64user)
 - 
