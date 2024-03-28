@@ -18,15 +18,19 @@ See also
 
 | **Command**                      | **Description**   |
 | ---------------------------------|:-----------------:|
-| **Cntl** **Shift** **P** | Open palette|
-| **Cntl** **M** | Toggle commads |
-| **Cntl** **Shift** **N** | Open a new window.|
+| **Cntl** **Shift** **P** | Open palette |
+| **Cntl** **Shift** **F** | Find in files |
+| **Cntl** **Shift** **G** | Show source control |
+| **Cntl** **Shift** **X** | Show extensions |
+| **Cntl** **K** **Z** | Turn On/Off Zen mode |
+| **Cntl** **K** **Cntl** **S** | Show keyboard shortcut keys |
+| **Cntl** **M** **M**| Toggle commads |
+| **Cntl** **Shift** **N** | Open a new window |
 | **Cntl** **+**| Zoom out|
 | **Cntl** **-**| Zoom in|
 | **Cntl** ****Shift** **`****| Show terminal|
 | **Cntl** **B**| Hide file explorer when in the explorer window|
 | **Cntl** **Shift** **E**| Show file explorer|
-
 
 
 
