@@ -38,6 +38,5 @@ See also
 
 ## 2. References
 
-- [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet){:target="_blank" rel="noopener"}
+- [Key Bindings for Visual Studio Code](https://code.visualstudio.com/docs/getstarted/keybindings#_keyboard-shortcuts-reference){:target="_blank" rel="noopener"}
 - [30 VSCode Keyboard Shortcuts You NEED to Know](https://www.youtube.com/watch?v=dI34jrEtmB0&t=2s){:target="_blank" rel="noopener"}
-- [Getting Started with Visual Studio](https://code.visualstudio.com/docs){:target="_blank" rel="noopener"}

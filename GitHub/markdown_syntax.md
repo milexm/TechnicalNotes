@@ -1,10 +1,16 @@
 # Markdown Syntax
 
 The [Markdown
-Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet){:target="_blank" rel="noopener"} used in this topic is intended as a quick reference and showcase. For more complete info, see [John Gruber's original spec](http://daringfireball.net/projects/markdown/) and the [Github-flavored Markdown](http://github.github.com/github-flavored-markdown/).
+Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet){:target="_blank"
+rel="noopener"} used in this topic is intended as a quick reference and
+showcase. For more complete info, see [John Gruber's original
+spec](http://daringfireball.net/projects/markdown/) and the [Github-flavored
+Markdown](http://github.github.com/github-flavored-markdown/).
 
-> [!NOTE]
-> See also a [Cheatsheet specific to Markdown Here](https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet) if that's what you're looking for. You can also check out more [Markdown tools](https://github.com/adam-p/markdown-here/wiki/Other-Markdown-Tools).
+> [!NOTE] See also a [Cheatsheet specific to Markdown
+> Here](https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet)
+> if that's what you're looking for. You can also check out more [Markdown
+> tools](https://github.com/adam-p/markdown-here/wiki/Other-Markdown-Tools).
 
 
 
@@ -18,8 +24,11 @@ Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet){:t
 
 To open a link in a different window use the following syntax:
 `{:target="_blank" rel="noopener"}`.  For example: [Markdown
-Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet){:target="_blank" rel="noopener"}.
-See also: [using rel="noreferer" without rel="noopener" or without target="_blank"](https://security.stackexchange.com/questions/241559/using-rel-noreferer-without-rel-noopener-or-without-target-blank){:target="_blank" rel="noopener"}
+Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet){:target="_blank"
+rel="noopener"}.  See also: [using rel="noreferer" without rel="noopener" or
+without
+target="_blank"](https://security.stackexchange.com/questions/241559/using-rel-noreferer-without-rel-noopener-or-without-target-blank){:target="_blank"
+rel="noopener"}
 
 
 ## 2. Note Warning and more
@@ -39,7 +48,9 @@ See also: [using rel="noreferer" without rel="noopener" or without target="_blan
 > [!CAUTION]
 > Negative potential consequences of an action.
 
-See also [An option to highlight a "Note" and "Warning" using blockquote (Beta)](https://github.com/orgs/community/discussions/16925){:target="_blank" rel="noopener"}.
+See also [An option to highlight a "Note" and "Warning" using blockquote
+(Beta)](https://github.com/orgs/community/discussions/16925){:target="_blank"
+rel="noopener"}.
 
 ## 3. Emoji Icons
 
