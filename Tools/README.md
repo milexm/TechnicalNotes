@@ -9,16 +9,22 @@ The **Tools** folder contains information about tools to use to create content f
 
 ## 1. GitHub Desktop
 
-![github_icon](../Resources\Images\GitHub\github_icon.jpg) Focus on what matters
+![github_icon](..\Resources\Images\GitHub\github_icon.jpg) Focus on what matters
 instead of fighting with Git. Whether you're new to Git or a seasoned user,
 GitHub Desktop simplifies your development workflow. You can download the
 desktop app at this location: [GitHub Desktop](https://desktop.github.com/). 
 
+See [README](../GitHub/README.md).  
 
 ## 2. Visual Studio Code
 
+This folder contains information about the **Visual Studio Code** tool.  Visual
+Studio Code is a lightweight but powerful source code editor that runs on your
+desktop and is available for Windows, macOS and Linux. It comes with built-in
+support for JavaScript, TypeScript and Node.js and has a rich ecosystem of
+extensions for other languages and runtimes (such as C++, C#, Java, Python, PHP, Go, and .NET). 
 
-[Getting started with VS code and download](https://code.visualstudio.com/docs/?dv=win64user)
+See [README](./Visual%20Studio%20Code/README.md). 
 
 
 ### 2.1. Installed Extensions
