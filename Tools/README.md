@@ -80,7 +80,5 @@ See [README](./Visual%20Studio%20Code/README.md).
 
 - [Getting started with VS code and download](https://code.visualstudio.com/docs/?dv=win64user)
 - [Getting started with VS code and download](http://stackoverflow.com){:target="_blank" rel="noopener"}
-- [Github Markdown basic writing and formatting
-  syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#lists)
-- [Getting Started with Python in VS Code](https://code.visualstudio.com/docs/python/python-tutorial#_prerequisites)
-- [Python virtual ervironments](https://github.com/milexm/Python/blob/main/documentation/getting-started/virtual-environments.md#python-virtual-environments)
+- [test]test
+- 
