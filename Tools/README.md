@@ -70,7 +70,6 @@ See [README](./Visual%20Studio%20Code/README.md).
 > not supported). Check that the installation works by opeing or
 > creating a Python file and start coding!
 
-
 ## 3. References
 
 - [Getting started with VS code and download](https://code.visualstudio.com/docs/?dv=win64user)
