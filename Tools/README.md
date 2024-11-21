@@ -32,20 +32,46 @@ See [README](./Visual%20Studio%20Code/README.md).
 1. **Markdown All in One**. All you need to write Markdown (keyboard shortcuts,
    table of contents, auto preview and more). [VS Marketplace
    Link](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one).
-2. **Grammarly**. A grammar check for Visual Studio Code using Grammarly.
-[VS Marketplace Link](https://marketplace.visualstudio.com/items?itemName=znck.grammarly).
-3. **Rewrap**. Hard wrapping for comments and other text in a given column. [VS
-   Marketplace
-   Link](https://marketplace.visualstudio.com/items?itemName=stkb.rewrap). See
-   the [setting.json](../Tools/.vscode/settings.json) file for the column wrap
-   value. See also [User and Workspace Settings](https://code.visualstudio.com/docs/getstarted/settings)
-4. TBD
-5. 
+1. **markdownlint**. markdownlint is an extension for the Visual Studio
+   Code editor that includes a library of rules to encourage standards
+   and consistency for Markdown files.
+   [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
+1. **Rewrap**. Hard wrapping for comments and other text in a given
+   column. [VS Marketplace
+   Link](https://marketplace.visualstudio.com/items?itemName=stkb.rewrap).
+   See the [setting.json](../Tools/.vscode/settings.json) file for the
+   column wrap value. See also [User and Workspace
+   Settings](https://code.visualstudio.com/docs/getstarted/settings)
+1. **Python**. A [Visual Studio Code
+   extension](https://marketplace.visualstudio.com/VSCode) with rich
+   support for the [Python language](https://www.python.org/) (for all
+   [actively supported Python
+   versions](https://devguide.python.org/versions/#supported-versions)),
+   providing access points for extensions to seamlessly integrate and
+   offer support for IntelliSense (Pylance), debugging (Python
+   Debugger), formatting, linting, code navigation, refactoring,
+   variable explorer, test explorer, and more! See also [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) extension.
 
+   The Python extension will automatically install the following extensions by default to provide the best Python development experience in VS Code:
+   1. [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance)
+      to provide performant Python language support 
+   1. [Python
+        Debugger](https://marketplace.visualstudio.com/items?itemName=ms-python.debugpy)
+        to provide a seamless debug experience with debugpy
+   > [!NOTE]  
+   > To use the Python extension you must [install a supported version of
+   > Python](https://code.visualstudio.com/docs/python/python-tutorial#_prerequisites)
+   > on your system (note: that the system install of Python on macOS is
+   > not supported). Check that the installation works by opeing or
+   > creating a Python file and start coding!
+1. **Python Indent**. Correct Python indentation in Visual Studio Code.
+   See also [Python
+   Indent](https://marketplace.visualstudio.com/items?itemName=KevinRose.vsc-python-indent).
 
-## 3. References 
+## 3. References
 
 - [Getting started with VS code and download](https://code.visualstudio.com/docs/?dv=win64user)
 - [Getting started with VS code and download](http://stackoverflow.com){:target="_blank" rel="noopener"}
-- [test]test
-- 
+- [Github Markdown basic writing and formatting
+  syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#lists)
+- [Getting Started with Python in VS Code](https://code.visualstudio.com/docs/python/python-tutorial#_prerequisites)
