@@ -59,15 +59,16 @@ See [README](./Visual%20Studio%20Code/README.md).
    1. [Python
         Debugger](https://marketplace.visualstudio.com/items?itemName=ms-python.debugpy)
         to provide a seamless debug experience with debugpy
-   > [!NOTE]  
-   > To use the Python extension you must [install a supported version of
-   > Python](https://code.visualstudio.com/docs/python/python-tutorial#_prerequisites)
-   > on your system (note: that the system install of Python on macOS is
-   > not supported). Check that the installation works by opeing or
-   > creating a Python file and start coding!
 1. **Python Indent**. Correct Python indentation in Visual Studio Code.
    See also [Python
    Indent](https://marketplace.visualstudio.com/items?itemName=KevinRose.vsc-python-indent).
+
+> [!NOTE]  
+> To use the Python extension you must [install a supported version of
+> Python](https://code.visualstudio.com/docs/python/python-tutorial#_prerequisites)
+> on your system (note: that the system install of Python on macOS is
+> not supported). Check that the installation works by opeing or
+> creating a Python file and start coding!
 
 ## 3. References
 
