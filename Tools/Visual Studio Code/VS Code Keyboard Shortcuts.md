@@ -7,12 +7,9 @@ using the available actions.  It also has a search box on the top that helps you
 in finding commands or keybindings.  You can open this editor by going to the
 menu under **File > Preferences > Keyboard Shortcuts**.
 
-See also 
-
-
-
 - [1. Windows OS Main Shortcuts](#1-windows-os-main-shortcuts)
 - [2. References](#2-references)
+
 
 ## 1. Windows OS Main Shortcuts
 
@@ -31,8 +28,6 @@ See also
 | **Cntl** ****Shift** **`****| Show terminal|
 | **Cntl** **B**| Hide file explorer when in the explorer window|
 | **Cntl** **Shift** **E**| Show file explorer|
-
-
 
 
 
