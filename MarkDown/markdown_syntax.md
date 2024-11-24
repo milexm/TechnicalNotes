@@ -12,13 +12,11 @@ Markdown](http://github.github.com/github-flavored-markdown/).
 > if that's what you're looking for. You can also check out more [Markdown
 > tools](https://github.com/adam-p/markdown-here/wiki/Other-Markdown-Tools).
 
-
-
-- [1. Create Links](#1-create-links)
-- [2. Note Warning and more](#2-note-warning-and-more)
-- [3. Emoji Icons](#3-emoji-icons)
-- [4. References](#4-references)
-
+- [Markdown Syntax](#markdown-syntax)
+  - [1. Create Links](#1-create-links)
+  - [2. Alerts](#2-alerts)
+  - [3. Emoji Icons](#3-emoji-icons)
+  - [4. References](#4-references)
 
 ## 1. Create Links
 
@@ -30,8 +28,19 @@ without
 target="_blank"](https://security.stackexchange.com/questions/241559/using-rel-noreferer-without-rel-noopener-or-without-target-blank){:target="_blank"
 rel="noopener"}
 
+<!--
 
-## 2. Note Warning and more
+-->
+
+## 2. Alerts
+
+Alerts are an extension of Markdown used to emphasize critical information. On GitHub, they are displayed with distinctive colors and icons to indicate the importance of the content.
+
+The following is the syntax for the alerts:
+
+![alert_syntax](../Resources/Images/GitHub/alert_syntax.jpg)
+
+The following example shows all five alert types.
 
 > [!NOTE]  
 > Highlights information that users should take into account, even when skimming.
@@ -48,13 +57,14 @@ rel="noopener"}
 > [!CAUTION]
 > Negative potential consequences of an action.
 
+
 See also [An option to highlight a "Note" and "Warning" using blockquote
 (Beta)](https://github.com/orgs/community/discussions/16925){:target="_blank"
 rel="noopener"}.
 
 ## 3. Emoji Icons
 
-[All-Github-Emoji-Icons](https://github.com/scotch-io/All-Github-Emoji-Icons){:target="_blank" rel="noopener"}.
+[emoji cheat sheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md {:target="_blank" rel="noopener"}).
 
 ## 4. References
 
@@ -64,4 +74,4 @@ rel="noopener"}.
 - [Cheatsheet specific to Markdown Here](https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet){:target="_blank" rel="noopener"}
 - [Markdown tools](https://github.com/adam-p/markdown-here/wiki/Other-Markdown-Tools){:target="_blank" rel="noopener"}
 - [An option to highlight a "Note" and "Warning" using blockquote (Beta)](https://github.com/orgs/community/discussions/16925){:target="_blank" rel="noopener"}
-- 
+-

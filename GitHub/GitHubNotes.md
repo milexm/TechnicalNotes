@@ -1,34 +1,44 @@
-<img src="https://min.gitcdn.link/repo/milexm/git-notes/master/images/git_github_icon.png"/>
+# GitHub Notes <!-- omit from toc -->
 
-# GitHub Notes
-<b>Git</b> is a revision control system, a <b>tool</b> to manage your source code history on your local machine. Git has a pretty steep learning curve compared to many other systems. It is a painstaking process. For more information, see [GitNotes](GitNotes.md). 
+ **Git** is a revision control system, a **tool** to manage your source code history on your local machine. Git has a pretty steep learning curve compared to many other systems. It is a painstaking process. For more information, see [GitNotes](GitNotes.md).
 
-These notes explain the GitHub basics. 
-<div class="info"><b>Git</b> is a revision control system, a <b>tool</b> to manage your source code history. <b>GitHub</b> is a hosting service for Git repositories.
-They are not the same thing: <span style="color:red; font-weight:bold">Git is the tool, GitHub is the service for projects that use Git.</span></div>
+> [!NOTE]
+> **Git** is a revision control system, a <b>tool</b> to manage your
+source code history. <b>GitHub</b> is a hosting service for Git
+repositories. They are not the same thing: **Git is the tool, GitHub is the service for projects that use Git**.
 
-To shorten your GitHub file address go to [https://git.io/](https://git.io/). 
+![git](../Resources/Images/GitHub/git_github.png)
 
-<img src="https://raw.githubusercontent.com/milexm/git-notes/master/images/git_github.png" width="400"/>
+To shorten your GitHub file address go to
+[https://git.io/](https://git.io/). (??)
 
 
-
-## Table of Content
-- [Git](#git) 
-	- [Git Getting Started](#git_start)
-	- TBD 
-- [GitHub](#github) 
-	- [GitHub Getting Started](#github_start)
-	- TBD 
+- [Git](#git)
+  - [Git Getting Started](#git-getting-started)
+    - [Create a Local Git Repository via GitHub Desktop](#create-a-local-git-repository-via-github-desktop)
+    - [Publish Local Git Repository to GitHub](#publish-local-git-repository-to-github)
+    - [Add information to README.md](#add-information-to-readmemd)
+- [GitHub](#github)
+  - [GitHub Getting Started](#github-getting-started)
+    - [Create a Repository](#create-a-repository)
+- [GitHub Hello World](#github-hello-world)
+  - [Create a Repository](#create-a-repository-1)
+  - [Create a Branch](#create-a-branch)
+  - [Commit Changes](#commit-changes)
+  - [Open a Pull Request](#open-a-pull-request)
+  - [Merge Pull Request](#merge-pull-request)
+- [Glossary](#glossary)
+- [References](#references)
+- [Custom Styles](#custom-styles)
 - [Appendix](#appendix)
-	- [Appendix A - TBD](#appendixa) 
+  - [Appendix A - TBD](#appendix-a---tbd)
 
+## Git
 
+**Git** is a revision control system, a <b>tool</b> to manage your source code history
 
-## <a id="git"></a>Git
-<b>Git</b> is a revision control system, a <b>tool</b> to manage your source code history
+### Git Getting Started
 
-### <a id="git_start"></a>Git Getting Started 
 The first steps you want to perform is to install **Git**.  
 
 1. We reccomend you install the GitHub GUI client from this location: [GitHub Desktop](https://desktop.github.com/). This tool provides a very friendly GUI and seamless integration with your GitHub repositories. So, go for it!! For more information, see [GitHub Desktop Documentation](https://help.github.com/en/desktop).
