@@ -1,30 +1,30 @@
-# GitHub Basic Process
+# GitHub basic process
 
-**Table of contents**
-- [1. Create issues](#1-create-issues)
-- [2. Create a fork](#2-create-a-fork)
-  - [2.1. Create a Pull Request (PR)](#21-create-a-pull-request-pr)
-- [3. Create a Pull Request from a branch in the original repository](#3-create-a-pull-request-from-a-branch-in-the-original-repository)
-- [4. PR Review Phase](#4-pr-review-phase)
-- [5. PR Accept Phase](#5-pr-accept-phase)
-- [6. Directly Editing Artifacts](#6-directly-editing-artifacts)
-- [7. Avoid Directly Committing New Artifacts](#7-avoid-directly-committing-new-artifacts)
-- [8. Use checklists for large issues or PRs](#8-use-checklists-for-large-issues-or-prs)
-  - [8.1. About task lists (check lists)](#81-about-task-lists-check-lists)
-    - [8.1.1. Tracking work on an issue](#811-tracking-work-on-an-issue)
-    - [8.1.2. Convert a task to an issue](#812-convert-a-task-to-an-issue)
-- [9. Create a project](#9-create-a-project)
-  - [9.1. Adding draft issues to your project](#91-adding-draft-issues-to-your-project)
-  - [9.2. Reorder rows](#92-reorder-rows)
-  - [9.3. Adding your project to a repository](#93-adding-your-project-to-a-repository)
-  - [9.4. Excluding files from being pushed to the remote repository](#94-excluding-files-from-being-pushed-to-the-remote-repository)
-- [10. Tools](#10-tools)
+- [GitHub basic process](#github-basic-process)
+  - [1. Create issues](#1-create-issues)
+  - [2. Create a fork](#2-create-a-fork)
+    - [2.1. Create a Pull Request (PR)](#21-create-a-pull-request-pr)
+  - [3. Create a Pull Request from a branch in the original repository](#3-create-a-pull-request-from-a-branch-in-the-original-repository)
+  - [4. PR Review Phase](#4-pr-review-phase)
+  - [5. PR Accept Phase](#5-pr-accept-phase)
+  - [6. Directly Editing Artifacts](#6-directly-editing-artifacts)
+  - [7. Avoid Directly Committing New Artifacts](#7-avoid-directly-committing-new-artifacts)
+  - [8. Use checklists for large issues or PRs](#8-use-checklists-for-large-issues-or-prs)
+    - [8.1. About task lists (check lists)](#81-about-task-lists-check-lists)
+      - [8.1.1. Tracking work on an issue](#811-tracking-work-on-an-issue)
+      - [8.1.2. Convert a task to an issue](#812-convert-a-task-to-an-issue)
+  - [9. Create a project](#9-create-a-project)
+    - [9.1. Adding draft issues to your project](#91-adding-draft-issues-to-your-project)
+    - [9.2. Reorder rows](#92-reorder-rows)
+    - [9.3. Adding your project to a repository](#93-adding-your-project-to-a-repository)
+    - [9.4. Excluding files from being pushed to the remote repository](#94-excluding-files-from-being-pushed-to-the-remote-repository)
+  - [10. Tools](#10-tools)
 
 This document describes a short process to effectively use GitHub to achieve the following main goals:
 
 1. Proposing a change. 
 2. Reporting a bug. 
-3. Making improvement suggestions.   
+3. Making improvement suggestions.
 
 > [!NOTE]
 > The intent of this document is not to teach the use of GitHub. The document just gathers some basic rules for a quick reference. 

@@ -34,6 +34,11 @@ See [README](./Visual%20Studio%20Code/README.md).
 1. **Markdown All in One**. All you need to write Markdown (keyboard shortcuts,
    table of contents, auto preview and more). [VS Marketplace
    Link](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one).
+
+   - In the file `C:\Users\miele\AppData\Roaming\Code\User\settings.json` set the following: `"markdown.extension.toc.orderedList": false` to avoid the automatic numbering of the TOC entries. Otherwise the numbering conflicts with the numbering you get when in the palette you use the command:  `Markdown All in One: Add/Update section numbers`. 
+   You can get to the `settings.json` file via the *Markdown All in One settings*. Use the *Settings* gear, then look for *Omitted from Toc*, finally select the link: `Edit in settings.json`. 
+   ![Edit in settings.json](../Resources/Images/MarkDown/omitted_from_TOC.png).
+   See also the extension documentation at: [Markdown All in One Documentation](https://markdown-all-in-one.github.io/docs/).
 1. **markdownlint**. markdownlint is an extension for the Visual Studio
    Code editor that includes a library of rules to encourage standards
    and consistency for Markdown files.
