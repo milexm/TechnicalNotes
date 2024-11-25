@@ -49,7 +49,9 @@ See [README](./Visual%20Studio%20Code/README.md).
    See the [setting.json](../Tools/.vscode/settings.json) file for the
    column wrap value. See also [User and Workspace
    Settings](https://code.visualstudio.com/docs/getstarted/settings)
-1. **Python**. A [Visual Studio Code
+1. **Python**.
+   [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+   extension. A [Visual Studio Code
    extension](https://marketplace.visualstudio.com/VSCode) with rich
    support for the [Python language](https://www.python.org/) (for all
    [actively supported Python
@@ -76,6 +78,8 @@ See [README](./Visual%20Studio%20Code/README.md).
 > not supported). Check that the installation works by opeing or
 > creating a Python file and start coding!
 
+> [!TIP]
+> A best practice is to use a project-specific virtual environment. Once you activate that environment, any packages you then install are isolated from other environments, including the global interpreter environment, reducing many complications that can arise from conflicting package versions. You can create non-global environments in VS Code using *Venv* or *Anaconda with Python: Create Environment*. For more informations, see [Python virtual ervironments](https://github.com/milexm/Python/blob/main/documentation/getting-started/virtual-environments.md#python-virtual-environments).
 
 ## 3. References
 
@@ -84,3 +88,4 @@ See [README](./Visual%20Studio%20Code/README.md).
 - [Github Markdown basic writing and formatting
   syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#lists)
 - [Getting Started with Python in VS Code](https://code.visualstudio.com/docs/python/python-tutorial#_prerequisites)
+- [Python virtual ervironments](https://github.com/milexm/Python/blob/main/documentation/getting-started/virtual-environments.md#python-virtual-environments)
