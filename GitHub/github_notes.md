@@ -1,19 +1,22 @@
-# GitHub notes <!-- omit from toc -->
+# GitHub Notes <!-- omit from toc -->
 
  **Git** is a revision control system, a **tool** to manage your source code history on your local machine. Git has a pretty steep learning curve compared to many other systems. It is a painstaking process. For more information, see [GitNotes](GitNotes.md).
 
 > [!NOTE]
-> **Git** is a revision control system, a **tool** to manage your
-source code history. **GitHub** is a hosting service for Git
+> **Git** is a revision control system, a <b>tool</b> to manage your
+source code history. <b>GitHub</b> is a hosting service for Git
 repositories. They are not the same thing: **Git is the tool, GitHub is the service for projects that use Git**.
 
 ![git](../Resources/Images/GitHub/git_github.png)
- 
+
 To shorten your GitHub file address go to
 [https://git.io/](https://git.io/). (??)
 
+## 1. Git
+
 - [1. Git](#1-git)
-  - [1.1. Git Getting Started](#11-git-getting-started)
+- [Git](#git)
+  - [Git Getting Started](#git-getting-started)
     - [1.1.1. Create a local Git repository via GitHub Desktop](#111-create-a-local-git-repository-via-github-desktop)
     - [1.1.2. Publish Local Git Repository to GitHub](#112-publish-local-git-repository-to-github)
     - [1.1.3. Add information to README.md](#113-add-information-to-readmemd)
@@ -33,11 +36,11 @@ To shorten your GitHub file address go to
 - [7. - 1. Git](#7---1-git)
 - [8. References](#8-references)
 
-## 1. Git
+## Git
 
-**Git** is a revision control system, a **tool** to manage your source code history.
+**Git** is a revision control system, a <b>tool</b> to manage your source code history
 
-### 1.1. Git Getting Started
+### Git Getting Started
 
 The first steps you want to perform is to install **Git**.  
 
