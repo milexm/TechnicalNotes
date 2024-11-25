@@ -7,7 +7,7 @@ This folder contains information about the **Git** tool ans **GitHub** hosting s
  **GitHub** is the hosting service for Git repositories. For more information, see [GitHub](../GitHub/github_notes.md).
  
  In summary, **Git is the tool, GitHub is the service for projects that use Git**.
-
+ 
 ## Topics
 - [About Git and GitHub](./GitHubNotes.md)
 - [Process to effectively use GitHub ](./github_process.md)
