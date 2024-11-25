@@ -8,7 +8,7 @@ source code history. **GitHub** is a hosting service for Git
 repositories. They are not the same thing: **Git is the tool, GitHub is the service for projects that use Git**.
 
 ![git](../Resources/Images/GitHub/git_github.png)
-
+ 
 To shorten your GitHub file address go to
 [https://git.io/](https://git.io/). (??)
 
