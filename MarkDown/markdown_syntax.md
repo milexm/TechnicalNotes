@@ -27,9 +27,6 @@ without
 target="_blank"](https://security.stackexchange.com/questions/241559/using-rel-noreferer-without-rel-noopener-or-without-target-blank){:target="_blank"
 rel="noopener"}
 
-<!--
-
--->
 
 ## 2. Alerts
 
