@@ -51,13 +51,14 @@ The first steps you want to perform is to install **Git**.
 
 1. Activate the Git client.
 2. From the File drop-down menu, select **Create a New Repository**
-3. In the popup dialog window enter the required information. The following picture shows an examnple:
-<img src="https://docs.google.com/uc?export=download&id=1kVCq5scSJ3DfZCnKoNb402JSTFHx4lwK" width="400"/>
-4. Click the **Create Repository** button. This is an example of the results:
-<img src="https://docs.google.com/uc?export=download&id=1froY4268BZq8jZ0XERZJj0CqZw7Qbx2B" width="400"/>
+3. In the popup dialog window enter the required information. 
+![create new repository](../Resources/Images/GitHub/create_new_repository_local.png)
+4. Select the **Create Repository** button. This is an example of the results: 
+![created new repository](../Resources/Images/GitHub/created_new_repository_local.png)
 5. Click the **preferences** link and enter your GitHub account information. For more information, see [Configuring Git for GitHub Desktop](https://help.github.com/en/desktop/getting-started-with-github-desktop/configuring-git-for-github-desktop).
-6. Configure your default editor. We have selected *VS Code* for our examples, as shown in the next picture. For more information, see [Configuring a default editor](https://help.github.com/en/desktop/getting-started-with-github-desktop/configuring-a-default-editor).
-<img src="https://docs.google.com/uc?export=download&id=1HK7gxt-LVSu12dy1-LxOkJ6umsvxxDWn" width="400"/>
+6. Configure your default editor. We have selected *VS Code* for our examples, as shown in the next picture. For more information, see 
+[Configuring a default editor](../Resources/Images/GitHub/created_new_repository_local.png)
+
 
 #### 1.1.2. Publish Local Git Repository to GitHub
 
@@ -107,7 +108,7 @@ Your repository can be a place where to store ideas, resources, or even share an
 1. Click the **Create repository** button.
 The following picture shows an example of a repository creation:
 
-<img src="https://docs.google.com/uc?export=download&id=185BSeMXxHnSVrI_g2F7ULQIp0zeZB5Fp" width="400"/>
+![create new repository](../Resources/Images/GitHub/create_new_repository.png)
 
 ## 3. GitHub Hello World
 
