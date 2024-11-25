@@ -59,7 +59,6 @@ The first steps you want to perform is to install **Git**.
 6. Configure your default editor. We have selected *VS Code* for our examples, as shown in the next picture. For more information, see 
 [Configuring a default editor](../Resources/Images/GitHub/created_new_repository_local.png)
 
-
 #### 1.1.2. Publish Local Git Repository to GitHub
 
 1. If not done yet, click the **preferences** link and enter your GitHub account information. For more information, see [Configuring Git for GitHub Desktop](https://help.github.com/en/desktop/getting-started-with-github-desktop/configuring-git-for-github-desktop).
