@@ -41,6 +41,7 @@ Visual Studio Code in this example is the default editor.
     ![branch_conflicts_use_vscode_editor](../Resources/Images/GitHub/branch_conflicts_use_vscode_editor.png) 
 4. The conflict errors are shown in VS Code as hown in the following picture.
 
+4. The conflict errors are shown in VS Code as hown in the following picture. 
     ![branch_conflicts_shown_in_vscode](../Resources/Images/GitHub/branch_conflicts_shown_in_vscode.png)
 
     The picture clearly shows the conflicts between the master repository content, titled `master (incoming change)` and the current change, titled `HEAD (current change)` in the branch. 
@@ -51,9 +52,7 @@ Visual Studio Code in this example is the default editor.
 7. In the GitHub desktop, in the popup dialog box, select the  `Continue merge` button. 
 
     ![branch_conflicts_solves_merge](../Resources/Images/GitHub/branch_conflicts_solved_merge.png)
-8. YOu may need to create a new pull request and close the old one. 
-
-
+8. You may need to create a new pull request and close the old one. 
 
 ## 2. References
 
