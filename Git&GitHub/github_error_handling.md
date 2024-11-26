@@ -7,6 +7,7 @@ This topic looks at errors that you might encounter when using GitHub. It also s
   - [1.1. Conflct resolution](#11-conflct-resolution)
 - [2. References](#2-references)
 
+
 ## 1. Branch conflicts
 
 One of the most common errors is the conflicting changes made to a file,
