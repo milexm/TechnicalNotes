@@ -2,18 +2,10 @@
 
 This topic looks at errors that you might encounter when using GitHub. It also shows the way to solve them. 
 
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
 - [1. Branch conflicts](#1-branch-conflicts)
   - [1.1. Conflct resolution](#11-conflct-resolution)
 - [2. References](#2-references)
 
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
 ## 1. Branch conflicts
 
 One of the most common errors is the conflicting changes made to a file,
@@ -64,11 +56,8 @@ Visual Studio Code in this example is the default editor.
     ![branch_conflicts_solves_merge](../Resources/Images/GitHub/branch_conflicts_solved_merge.png)
 8. You may need to create a new pull request and close the old one. 
 
-<<<<<<< Updated upstream
-=======
 
 
->>>>>>> Stashed changes
 ## 2. References
 
 - [Configuring a default editor in GitHub Desktop](https://docs.github.com/en/desktop/configuring-and-customizing-github-desktop/configuring-a-default-editor-in-github-desktop)
