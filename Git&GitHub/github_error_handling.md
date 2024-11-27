@@ -2,7 +2,12 @@
 
 This topic looks at errors that you might encounter when using GitHub. It also shows the way to solve them. 
 
-## Branch conflicts
+- [1. Branch conflicts](#1-branch-conflicts)
+  - [1.1. Conflct resolution](#11-conflct-resolution)
+- [2. TBD](#2-tbd)
+- [3. References](#3-references)
+
+## 1. Branch conflicts
 
 One of the most common errors is the conflicting changes made to a file,
 by different people and at the same time for example. When this happens,
@@ -12,7 +17,7 @@ the following figure.
 
 ![branch conflicts](../Resources/Images/GitHub/branch_conflicts.png)
 
-### Conflct resolution 
+### 1.1. Conflct resolution 
 
 If the conflict is simple, the **Resolve conflicts** button is activated
 otherwise, it is disabled. If the button is activated, you can select it
@@ -34,20 +39,28 @@ Visual Studio Code in this example is the default editor.
    Desktop](https://docs.github.com/en/desktop/configuring-and-customizing-github-desktop/configuring-a-default-editor-in-github-desktop).  
 
     ![branch_conflicts_use_vscode_editor](../Resources/Images/GitHub/branch_conflicts_use_vscode_editor.png) 
+4. The conflict errors are shown in VS Code as hown in the following picture.
+
 4. The conflict errors are shown in VS Code as hown in the following picture. 
+
     ![branch_conflicts_shown_in_vscode](../Resources/Images/GitHub/branch_conflicts_shown_in_vscode.png)
 
     The picture clearly shows the conflicts between the master repository content, titled `master (incoming change)` and the current change, titled `HEAD (current change)` in the branch. 
 5. To solve the issues, select one of the links shown in the conflicting display. 
+
     ![branch_conflicts_solve_in_vscode](../Resources/Images/GitHub/branch_conflicts_solve_in_vscode.png)
+
 6. If the changes in the branch are correct, select `Accept Current Change`. Then save the changed file. 
+
 7. In the GitHub desktop, in the popup dialog box, select the  `Continue merge` button. 
+
     ![branch_conflicts_solves_merge](../Resources/Images/GitHub/branch_conflicts_solved_merge.png)
-8. 
+8. You may need to create a new pull request and close the old one. 
 
 
+## 2. TBD
 
-## References
+## 3. References
 
 - [Configuring a default editor in GitHub Desktop](https://docs.github.com/en/desktop/configuring-and-customizing-github-desktop/configuring-a-default-editor-in-github-desktop)
 - 
