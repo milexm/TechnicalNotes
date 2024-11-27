@@ -4,7 +4,8 @@ This topic looks at errors that you might encounter when using GitHub. It also s
 
 - [1. Branch conflicts](#1-branch-conflicts)
   - [1.1. Conflct resolution](#11-conflct-resolution)
-- [2. References](#2-references)
+- [2. TBD](#2-tbd)
+- [3. References](#3-references)
 
 ## 1. Branch conflicts
 
@@ -57,8 +58,9 @@ Visual Studio Code in this example is the default editor.
 8. You may need to create a new pull request and close the old one. 
 
 
+## 2. TBD
 
-## 2. References
+## 3. References
 
 - [Configuring a default editor in GitHub Desktop](https://docs.github.com/en/desktop/configuring-and-customizing-github-desktop/configuring-a-default-editor-in-github-desktop)
 - 
