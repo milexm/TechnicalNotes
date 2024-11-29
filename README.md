@@ -13,7 +13,4 @@
 
 ***
 
-<center>
-	<img src="Resources/Images/worth_writing.png" width="300" 
-		alt="worth writing"/>   
-</center>
+![Wrting](Resources/Images/worth_writing.png)
