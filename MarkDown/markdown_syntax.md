@@ -70,4 +70,4 @@ rel="noopener"}.
 - [Cheatsheet specific to Markdown Here](https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet){:target="_blank" rel="noopener"}
 - [Markdown tools](https://github.com/adam-p/markdown-here/wiki/Other-Markdown-Tools){:target="_blank" rel="noopener"}
 - [An option to highlight a "Note" and "Warning" using blockquote (Beta)](https://github.com/orgs/community/discussions/16925){:target="_blank" rel="noopener"}
--
+- [How do you add code blocks in Markdown?](https://itsfoss.com/markdown-code-block/).

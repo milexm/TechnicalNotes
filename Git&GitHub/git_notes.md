@@ -1,172 +1,248 @@
-<link href="../Css/custom.css" rel="stylesheet"></link>
+# Git notes <!-- omit from toc -->
 
-<center>
-<img src="../Resources/Images/Git/git.png" width="400"/>  
-</center>  
+**Git** is a revision control system, a **tool** to manage your source code history on your local machine. 
 
+![git icon](../Resources/Images/Git/git.png)
 
-# Git Notes
-<b>Git</b> is a revision control system, a <b>tool</b> to manage your source code history on your local machine. 
-
-<div class="danger">Git has a pretty steep learning curve compared to many other systems. It is a painstaking process!!</div>
+Git has a pretty steep learning curve compared to many other systems. It is a painstaking process!! You many want to look into GitHub desktop app as a substitute. For more information, see [GitHub notes](github_notes.md).
 
 These notes which leverage many sources, listed in the [References](#ref) section attempt to explain Git in simple terms. The goal is to understand Git internals and its usage at a fundamental level. 
 If you are used to the SCM (Software Configuration Management) world, put that knowledge aside and start from a clean slate <span class="m_warning">'cause Git aint SCM</span>. 
 
-These notes explain Git basics. For more information about GitHub, see [GitHub Notes](GitHubNotes.md). 
+These notes explain Git basics. For information about GitHub, see [GitHub notes](github_notes.md).
 
-<div class="info"><b>Git</b> is a revision control system, a <b>tool</b> to manage your source code history. <b>GitHub</b> is a hosting service for Git repositories.
-They are not the same thing: <span style="color:red; font-weight:bold">Git is the tool, GitHub is the service for projects that use Git.</span></div>
+> [!WARNING] 
+> **Git** is a revision control system, a **tool** to manage
+> your source code history. **GitHub** instead is a hosting service for
+Git repositories. They are not the same thing: Git is the tool, GitHub
+is the service for projects that use Git.
 
-To shorten your GitHub address go to [https://git.io/](https://git.io/). 
+![git and github](../Resources/Images/GitHub/git_github.png)
+
+- [1. Git getting started](#1-git-getting-started)
+	- [1.1. Create a local Git repository via GitHub Desktop app](#11-create-a-local-git-repository-via-github-desktop-app)
+		- [1.1.1. Publish Local Git repository to GitHub](#111-publish-local-git-repository-to-github)
+		- [1.1.2. Add information to README.md](#112-add-information-to-readmemd)
+- [2. What is Git?](#2-what-is-git)
+	- [2.1. Non linear development](#21-non-linear-development)
+	- [2.2. Distributed development](#22-distributed-development)
+	- [2.3. Efficiency](#23-efficiency)
+	- [2.4. Git toolkit design](#24-git-toolkit-design)
+- [3. Git Internals](#3-git-internals)
+	- [3.1. Git object types](#31-git-object-types)
+	- [3.2. Git structure](#32-git-structure)
+		- [3.2.1. The blob](#321-the-blob)
+		- [Commit](#commit)
+		- [3.2.2. The Tree](#322-the-tree)
+- [4.  Git Branches](#4--git-branches)
+	- [4.1. Create a Branch](#41-create-a-branch)
+	- [4.2. Merge with Master](#42-merge-with-master)
+- [5.  Git Command Reference](#5--git-command-reference)
+	- [5.1. End User Commands](#51-end-user-commands)
+	- [5.2. Plumbing Commands](#52-plumbing-commands)
+- [6.  Glossary](#6--glossary)
+- [7. References](#7-references)
+- [8. Appendix](#8-appendix)
+	- [8.1. Appendix A - Git Command Line](#81-appendix-a---git-command-line)
+		- [8.1.1. Create a Local Git Repository](#811-create-a-local-git-repository)
+		- [8.1.2. Handle Files in the Git Repo](#812-handle-files-in-the-git-repo)
+	- [8.2. Create a Branch](#82-create-a-branch)
+- [9. References](#9-references)
 
 
-<img src="https://raw.github.com/milexm/TechnicalNotes/master/Resources/Images/GitHub/git_github.png" width="400"/> 
+## 1. Git getting started
+
+1. Install the Git command line tool, refer to [Getting Started - Installing Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+1. We reccomend installing the GitHub Desktop client as described below. This tool provides a very friendly GUI and a seamless integration with your GitHub repositories. So, go for it!! For more information, see [GitHub Desktop Documentation](https://help.github.com/en/desktop).
+   1. Install the desktop app from this loaction: [GitHub Desktop](https://desktop.github.com/). 
+   2. Configure the use of Git in the desktop app. For more information, see [Configuring Git for GitHub Desktop](https://help.github.com/en/desktop/getting-started-with-github-desktop/configuring-git-for-github-desktop).  
+   3. Configure Visual Studio Code as your default editor. For more information, see [Configuring a default editor in GitHub Desktop](https://docs.github.com/en/desktop/configuring-and-customizing-github-desktop/configuring-a-default-editor-in-github-desktop).  
 
 
-## Table of Content
+### 1.1. Create a local Git repository via GitHub Desktop app
 
-- [Git Getting Started](#git)
-- [What is Git?](#git?)
-- [Git Internals](#git_intern)
-- [Git Branches](#branches)
-- [Glossary](#glos)
-- [References](#ref)
-- [Appendix](#appendix)
-	- [Appendix A - Git Command Line](#appendixa)  
-
-
-
-## <a id="git"></a>Git Getting Started
-<b>Git</b> is a revision control system, a <b>tool</b> to manage your source code history
-
-The first steps you want to perform is to install **Git**.  
-
-1. We reccomend you install the GitHub Desktop client from this location: [GitHub Desktop](https://desktop.github.com/). This tool provides a very friendly GUI and a seamless integration with your GitHub repositories. So, go for it!! For more information, see [GitHub Desktop Documentation](https://help.github.com/en/desktop).
-1. Alternatively, you can install the Git command line tool, refer to [Getting Started - Installing Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git). 
-
-#### Create a Local Git Repository via GitHub Desktop 
-1. Activate the Git Desktop client.
-1. From the File drop-down menu, select **Create a New Repository**
+1. Activate the GitHub desktop client.
+1. From the **File** drop-down menu, select **Create a New Repository**
 1. In the popup dialog window enter the required information. 
 1. Click the **Create Repository** button. 
-1. Click the **preferences** link and enter your GitHub account information. For more information, see
-<a href="https://help.github.com/en/desktop/getting-started-with-github-desktop/configuring-git-for-github-desktop">Configuring Git for GitHub Desktop</a>.
-6. Configure your default editor. We have selected *VS Code* for our examples. For more information, see 
-<a href="https://help.github.com/en/desktop/getting-started-with-github-desktop/configuring-a-default-editor">Configuring a default editor</a>.
 
 
-#### Publish Local Git Repository to GitHub 
+#### 1.1.1. Publish Local Git repository to GitHub 
 
-1. If not done yet, click the **preferences** link and enter your GitHub account information. For more information, see [Configuring Git for GitHub Desktop](https://help.github.com/en/desktop/getting-started-with-github-desktop/configuring-git-for-github-desktop).
-1. In the right pane, click the **Publish repository** button. 
-1. In the popup dialog, uncheck *Keep this code private*, if you wish; click the **Publish repository** button. 
+1. If not done yet, select the **preferences** link and enter your GitHub account information. For more information, see [Configuring Git for GitHub Desktop](https://help.github.com/en/desktop/getting-started-with-github-desktop/configuring-git-for-github-desktop).
+1. In the right pane, select the **Publish repository** button. 
+1. In the popup dialog, uncheck *Keep this code private*, if you wish; select the **Publish repository** button. 
 1. Click the **View on GitHub** button to verify that the repo has been created in GitHub. 
 
-#### Add information to README.md 
-1. In your favorite markdown editor, edit the **README.md** file and add meaningful information about the project. <div class="info">I use [MacDown](https://macdown.uranusjr.com/) as the markdown editor on a Mac laptop.</div>
+#### 1.1.2. Add information to README.md 
+
+1. In your favorite markdown editor, edit the **README.md** file and add meaningful information about the project. I use [Visual Studio Code](https://code.visualstudio.com/docs) as the markdown editor on Windows machine. 
 2. In your Git client you will see in green the content added to the file. Verify that everything is correct.
 3. In the left pane, add a comment about the changes you made.
-4. Click the **Commit to master** button. 
-5. In the right pane, click the **Push origin** button. This publishes the file to your GitHub repository.  
+4. Select the **Commit to master** button. 
+5. In the right pane, select the **Push origin** button. This publishes the file to your GitHub repository.  
 
-## <a id="git?"></a>What is Git?
-Git is an open source Version Control System (VCS) tool created by **Mr. Linus Torvalds**. It stores and processes file content much differently than other version control tools. Some of the information you read next has been adapted fromn 
-[Git Internals PDF](https://github.com/pluralsight/git-internals-pdf/releases/tag/v2.0) written by guru Scott Chacon. 
+## 2. What is Git?
 
-According to Scott, Git is a <span class="m_warning">stupid content tracker</span>. It is a really interesting file system, which tracks content (files and directories). 
-At its core <span class="m_warning">it is a collection of simple tools that implement a tree history storage and directory content management system. It is simply used as an SCM, not really designed as one.</span> 
-For example, when most SCMs store a new version of a project, they store the code delta or diff.<span class="m_warning"> When Git stores a new version of a project, it stores a new tree, that contains a bunch of content blobs and a collection of pointers that can be expanded back into a full directory of files and subdirectories. If you want a diff between two versions, Git doesn’t add up all the deltas, it simply looks at the two trees and runs a new diff on them.</span>
+Git is an open source Version Control System (VCS) tool created by **Mr.
+Linus Torvalds**. It stores and processes file content much differently
+than other version control tools. Some of the information shown below
+has been adapted fromn [Git Internals
+PDF](https://github.com/pluralsight/git-internals-pdf/releases/tag/v2.0)
+written by guru Scott Chacon. 
+See [How did Git get its name?](https://initialcommit.com/blog/How-Did-Git-Get-Its-Name).
 
-This is what basically allows the system to be easily distributed by simply transfering all the directories and content from one user to another. Git is efficient about it. It only stores identical files and directories once and it can compress and transfer its content using delta-compressed packfiles.
-The following are the things that Git is very good at doing. 
+According to Scott, Git is a **stupid content tracker**. It is a really
+interesting file system, which tracks content (files and directories).
+At its core t is a collection of simple tools that implement a tree
+history storage and directory content management system. It is simply
+used as an SCM, not really designed as one. For example, when most SCMs
+store a new version of a project, they store the code delta or diff. 
 
-### Non Linear Development
-Git is optimized for <span class="m_warning">cheap and efficient branching and merging</span>. It is built to be used simultaneously by many people, having multiple branches developed by individual developers, being merged, branched and re-merged constantly. Because of this, branching is incredibly cheap and merging is incredibly easy.
+> [!IMPORTANT] When Git stores a new version of a project, it stores a
+> new tree, that contains a bunch of content blobs and a collection of
+> pointers that can be expanded back into a full directory of files and
+> subdirectories. If you want a diff between two versions, Git doesn’t
+> add up all the deltas, it simply looks at the two trees and runs a new
+> diff on them. This is what basically allows the system to be easily
+> distributed by simply transfering all the directories and content from
+> one user to another. Git is efficient about it. It only stores identical
+> files and directories once and it can compress and transfer its content
+> using delta-compressed packfiles. The following are the things that Git
+> is very good at doing. 
 
-### Distributed Development
-Git is built to make distributed development simple. No repository is special or central in Git. Each clone is basically equal to another and could generally replace any other one at any time. It works completely offline or with hundreds of remote repositories that can push to and/or fetch from each other over several simple and standard protocols.
- 
-### Efficiency
-Git is very efficient. Most operations are local, which reduces unnecessary network overhead. Repositories are generally packed very efficiently, which often leads to surprisingly small repo sizes.
- 
-After creating a repository, you do your work in the working tree. Once your work reaches a significant point, you add your changes successively to the index (stage). Once the index contains everything you intend to commit, you record its content in the repository. Here’s a simple diagram that shows a typical project’s life-cycle: 
+### 2.1. Non linear development
+
+Git is optimized for cheap and efficient branching and merging. It is
+built to be used simultaneously by many people, having multiple branches
+developed by individual developers, being merged, branched and re-merged
+constantly. Because of this, branching is incredibly cheap and merging
+is incredibly easy.
+
+### 2.2. Distributed development
+
+Git is built to make distributed development simple. No repository is
+special or central in Git. Each clone is basically equal to another and
+could generally replace any other one at any time. It works completely
+offline or with hundreds of remote repositories that can push to and/or
+fetch from each other over several simple and standard protocols.
+
+### 2.3. Efficiency
+
+Git is very efficient. Most operations are local, which reduces
+unnecessary network overhead. Repositories are generally packed very
+efficiently, which often leads to surprisingly small repo sizes.
+
+After creating a repository, you do your work in the working tree. Once
+your work reaches a significant point, you add your changes successively
+to the index (stage). Once the index contains everything you intend to
+commit, you record its content in the repository. Here’s a simple
+diagram that shows a typical project’s life-cycle: 
 
 ![basic_life_cycle](../Resources/Images/Git/basic_life_cycle.png)
 
-### A Toolkit Design
-Git is not a single binary, but a collection of small specialized programs, which sometimes is annoying to people trying to learn Git, but is very useful when you want to do anything nonstandard with it. 
-<div class="warning">Git is not a monolithic program but a toolkit whose components can be combined and chained to perform interesting taks.</div>
-<div style="background-color: #e7f3fe; border-left: 6px solid #2196f3;">For a long time, Git was just the raw toolkit and the project to wrap those into a user friendly SCM was called Cogito. That project has since been abandoned as Git itself became easier to use.</div>
+### 2.4. Git toolkit design
 
-The tools can be more or less divided into two major categories, often referred to as the porcelain and the plumbing. 
+Git is not a single binary, but a collection of small specialized
+programs, which sometimes is annoying to people trying to learn Git, but
+is very useful when you want to do anything nonstandard with it. 
+
+> [!NOTE] 
+> Git is not a monolithic program but a toolkit whose components
+> can be combined and chained to perform interesting taks. 
+
+For a long time, Git was just the raw toolkit and the project to wrap
+those into a user friendly SCM was called Cogito. That project has since
+been abandoned as Git itself became easier to use.
+
+The tools can be more or less divided into two major categories, often
+referred to as the porcelain and the plumbing. 
 
 1. The **plumbing porgrams** are not meant to be used via the command line, but rather to help performing tasks flexibly. They are combined by programs and scripts into porcelain programs. 
 1. The **porcelain programs** are largely what we are focusing on as user-oriented interfaces. 
 
+## 3. Git Internals
 
-## <a id="git_intern"></a> Git Internals
-Let's explore some of Git internals to better understand its mechanincs and fundamentals. 
+Let's explore some of Git internals to better understand its mechanincs and fundamentals.
 
+### 3.1. Git object types
+
+Git stores different types of objects in ``.git/objects``. Git objects contain the actual data, they represent the main entities that make up the repository. There are **four main object types**, that is: 
+
+- **commit**
+- **tree**
+- **blob**
+- **annotated tag**
   
-### Git Object Types
-Git stores different types of objects in ``.git/objects``. Git objects contain the actual data, they represent the main entities that make up the repository. <div class="warning">There are **four main object types**, that is: **commit**, **tree**, **blob**, **annotated tag**. The first three being the most important to really understand the main functions. </div>
-Each object is compressed (with Zlib) and referenced by the SHA-1 value of its contents plus a small header. In the examples, we will use the first 6 characters of the SHA-1 for simplicity, but the actual value is 40 characters long.
+The first three being the most important to really understand the main functions. Each object is compressed (with Zlib) and referenced by the SHA-1 value of its contents plus a small header. In the examples, we will use the first 6 characters of the SHA-1 for simplicity, but the actual value is 40 characters long.
 
-<div class="info"><a ="http://en.wikipedia.org/wiki/SHA1">[SHA]</a> stands for <b>Secure Hash Algorithm</b>. A SHA creates an identifier of fixed length that uniquely identifies a specific piece of content. It is the most commonly used
-algorithm.</div>
+[SHA](ttp://en.wikipedia.org/wiki/SHA1) stands for S**ecure Hash Algorithm**. A SHA creates an identifier of fixed length that uniquely identifies a specific piece of content. It is the most commonly used
+algorithm.
 
 
-### Git Structure
-Internally, Git has a very similar structure of a file system, with a couple of key differences. 
+### 3.2. Git structure
+
+Internally, Git has a very similar structure of a file system, with a couple of key differences.
 
 - It represents file’s contents in **blobs**.
-- The blobs are also leaf nodes in something very close to a directory, called a **tree**. 
-- A blob is uniquely identified by an ID number <span class="m_warning">defined by computing the SHA1 hash id of its size and contents.</span> This ID has two additional properties: 
-	- It verifies that the blob’s contents will never change.
-	- The same contents shall always be represented by the same blob, no matter where it appears: across commits, across repositories, even across the whole Internet. It is an universal ID (GUID).   
+- The blobs are also leaf nodes in something very close to a directory, called a **tree**.
+- A blob is uniquely identified by an ID number **defined by computing the SHA1 hash id of its size and contents**. This ID has two additional properties:
+  - It verifies that the blob’s contents will never change.
+  - The same contents shall always be represented by the same blob, no matter where it appears: across commits, across repositories, even across the whole Internet. It is an universal ID (GUID). 
 
 The following picture shows an example of the Git tree structure.
 
-![git objects](../Resources/Images/Git/git_objects.png)
+ ![git objects](../Resources/Images/Git/git_objects.png)
 
-The difference between a Git blob and a filesystem’s file is that a blob does not store metadata about its content. The information is kept in the tree that holds the blob. 
+The difference between a Git **blob** and a filesystem’s file is that a blob **does not store metadata about its content**. The information is kept in the **tree** that holds the blob.
 
+> [!IMPORTANT]
+> A blob in a Git repository does not change. If you change the file in
+> the working directory, the repositiory stores it as a different
+> (immutable) blob with its unique ID. The fact that blobs are immutable
+> in the Git repository is what makes the all thing works. As it turns
+> out, this design allows for much more compact storage, since all
+> objects having identical content can be shared, no matter where they
+> are.
 
-<div class="warning">A blob in a Git repository does not change. If you change the file in the working directory, the repositiory stores it as a different (immutable) blob with its unique ID. The fact that blobs are immutable in the Git repository is what makes the all thing works.</div> 
+#### 3.2.1. The blob
 
-<div class="info">And as it turns out, this design allows for much more compact storage, since all objects having identical content can be shared, no matter where they are.</div>
-
-#### The Blob
-Let's get a better handle of the concepts described so far. Let's create a sample Git repository, and show how Git works from the bottom up. For more information, see [Git from the bottom up](https://jwiegley.github.io/git-from-the-bottom-up/). 
+Let's get a better handle of the concepts described so far. Let's create a sample Git repository, and show how Git works from the bottom up. For more information, see [Git from the bottom up](https://jwiegley.github.io/git-from-the-bottom-up/).
  
-1. In a terminal window, create a directory and switch to it.  
+1. In a terminal window, create a directory and switch to it. 
 
 		mkdir git-basics
-		cd git-basics
-	
+ 		cd git-basics
+
 1. Create a greeting text file.
 
-		echo 'Hello, world!' > greeting
+		 echo 'Hello, world!' > 
 
-1. Find the blob ID (SHA1 ID) of the file.
+2. Find the blob ID (SHA1 ID) of the file.
 
 		git hash-object greeting
-		af5626b4a114abcb82d63db7c8082c3c4756e51b 
+		5f831d630dd069aca58b3a164ff526b53c142456
 
+> [!IMPORTANT] 
+> Remember the hash ID is globally unique because based on the file
+content. In other words, if the file resides on my machine, or on yours,
+or in GitHub its SHA ID is always the same and refers always to the same
+file. It is the file **fingerprint**.
 
-<div style="background-color: #ffffcc; border-left: 6px solid #ffeb3b;">Remember the hash ID is globally unique because based on the file content. In other words, if the file resides on my machine, or on yours, or in GitHub its SHA ID is always the same and refers always to the same file. It is the file <b>fingerprint</b>. </div>
-
-If you run the previous command on another machine, you’ll get the same SHA ID. Even though you’re recreating two different repositories (possibly a world apart, even) the greeting blob in those two repositories will have the same SHA ID. You could even pull commits from one repository into another, and Git would realize that you’re tracking the same content — and so would only store one copy of it! Pretty cool!!
+If you run the previous command on another machine, you’ll get the same SHA ID. Even though you’re recreating two different repositories (possibly a world apart, even) the `README.md` blob in those two repositories will have the same SHA ID. You could even pull commits from one repository into another, and Git would realize that you’re tracking the same content — and so would only store one copy of it! Pretty cool!!
 
 Obviously, if you change the file content, the ID will be different, because the file content is different as shown in this example. 
 
 	echo 'Hello, WORLD!' > greeting 
 	git hash-object greeting
-	6d28059f1d98e315184d0bebd028a45f3ef0ae10
+	0939062473adf0aeb4efec5090755124c5c851e8
 
- 
-Let's now create a Git repository and commit the gretting file into it. We are going to do this all in one step right now, but then we'll come back and do it again in stages so you can see what’s going on. 
+> [!NOTE]
+> The previous code example uses the Markdown syntax to display code blocks. To create a code block you must enter four spaces or one tab in relation to the previous block. For more information, see [How do you add code blocks in Markdown?](https://itsfoss.com/markdown-code-block/). 
+
+#### Commit
+
+Let's now create a Git repository and commit the greting file into it. We are going to do this all in one step right now, but then we'll come back and do it again in stages so you can see what’s going on. 
 
 	$ git init
 	Initialized empty Git repository in 
@@ -192,6 +268,7 @@ Let's check what has been stored in the repository so far.
 		071840102a42f43d0bf6bcf714ab63643dda2b
 	
 	This is shown in the following picture. 	
+	
 	![git objects](../Resources/Images/Git/git_objects.png)
 	
 1. Check what kind of objects have been stored.
@@ -220,7 +297,8 @@ It will always have this same identifier, no matter how long the repository live
 
 <div class="warning">A <b>Git blob represents the fundamental data unit in Git</b>. <span style="color:red; font-weight:bold">Really, the whole Git system is about blob management</span>.</div>
 
-#### The Tree
+#### 3.2.2. The Tree
+
 The file contents are stored in blobs, which are featureless. They have no name, no structure. They are “blobs”, after all.
 
 In order to represent the structure and naming of files, Git attaches these blobs to a tree as leaf nodes. Let's see where the blob we created lives. Here we go.
@@ -271,7 +349,7 @@ The **commit** object contains the directory tree object hash, parent commit has
 	Date:   Tue May 14 18:22:21 2019 -0700
 	First commit.
 
-## <a name="branches"></a> Git Branches 
+## 4. <a name="branches"></a> Git Branches 
 
 If you want to create a new feature, you do not make changes to the main project. This is what the **branches** are for. 
 Branches allow you to move back and forth between project states. Once you're done with the new feature, you can merge your changes from your branch into the master branch. 
@@ -280,39 +358,39 @@ Branches allow you to move back and forth between project states. Once you're do
 
 Let's see the steps involved when branching, using this very file *GitNotes.md*. 
 
-### Create a Branch
+### 4.1. Create a Branch
 
-1. In the top bar menu click **Branch**.
+1. In the top bar menu select **Branch**.
 1. From the drop-down list select **New Branch**.  
 1. In the pop-up dialog enter the name of the branch, for example *wips* for work in progress. <span class="m_warning">Assure to select the *master* to start something new or another branch, if you need to build on the work done in the branch.</span>
 1. Click **Create Branch**.
 1. Now you are in the **wips** branch. <span class="m_info">If a branch already exists the mere fact of selecting it tells Git that the changes you make belong to the selected branch.</span> 
 1. You can change the *GitNotes.md* file. These changes are automatically picked up by the GitHub client and belong to the *wips* branch. Notice that we had already created the *wips* branch before starting this list, so the changes refer to the entire list.    
-1. At the bottom of the left pane, enter a comment and then click **Commit to wips**. <span class="m_info">You can continue changing the file until it is ready to be merged into the master branch.</span>  
+1. At the bottom of the left pane, enter a comment and then select **Commit to wips**. <span class="m_info">You can continue changing the file until it is ready to be merged into the master branch.</span>  
 1. Push the changes to the remote repository by clicking the **Push origin** button.      
 
-### Merge with Master
+### 4.2. Merge with Master
 Let's assume that we are done modifying the *GitNotes.md* file. We need now to merge the changes into the **master** branch as described next.
 
-1. In the top bar menu click **Branch**.
+1. In the top bar menu select **Branch**.
 1. From the drop-down list select **Create Pull Request**. 
-1. If a pop-up is displayed asking for publishing the changes in commit, click the button **Push Commits**. 
+1. If a pop-up is displayed asking for publishing the changes in commit, select the button **Push Commits**. 
 1. A window is open in your browser showing the changes you made on your remote GitHub repository. 
 1. Click **Create pull request**.  
-1. In the next window, click **Merge pull request**. 
+1. In the next window, select **Merge pull request**. 
 1. Leave a comment.
 1. Click **Confirm Merge**.
 
 
-## <a name="cmd_ref"></a> Git Command Reference
+## 5. <a name="cmd_ref"></a> Git Command Reference
 The following are some of the most commonly used Git comamnds. For more information, see [Git Reference](https://git-scm.com/docs).
 
-### End User Commands
+### 5.1. End User Commands
 
 1. sdffs
 1. ttt
 
-### Plumbing Commands 
+### 5.2. Plumbing Commands 
 The following commands are not used in everyday work but allow to get into the Git internals.
 
 1. **cat-file**. Provides information on objects type and size.
@@ -324,7 +402,7 @@ commit
 
 1. ss  
  
-## <a name="glos"></a> Glossary
+## 6. <a name="glos"></a> Glossary
 
 - **Repository** <div class="warning">It is a collection of commits, each of which is an archive of what the project’s working tree looked like at a past date, whether on your machine or someone else’s.</div> <div class="info">It also defines **HEAD** which identifies the branch or commit the current working tree stemmed from. Lastly, it contains a set of branches and tags, to identify certain commits by name.</div>
 - **Commit** <div class="warning">A commit is a snapshot of your working tree at some point in time.</div> <div class="info">The state of HEAD at the time your commit is made becomes that commit’s parent. This is what creates the notion of a **revision history**.</div>
@@ -339,7 +417,7 @@ commit
 - **Origin**.  It is a shorthand name for the remote repository that a project was originally cloned from. More precisely, it is used instead of that original repository's URL and thereby makes referencing much easier.
 
 
-## <a name="ref"></a>References
+## 7. <a name="ref"></a>References
 |Link|Description|
 |----|-----------|
 |[Git from the bottom up](https://jwiegley.github.io/git-from-the-bottom-up/)<img width=250px/>|Advance your understanding of Git and the simplicity underlying it. |
@@ -359,11 +437,11 @@ commit
 
 
 
-## <a id="appendix"></a>Appendix 
+## 8. <a id="appendix"></a>Appendix 
 
-### <a id="appendixa"></a>Appendix A - Git Command Line
+### 8.1. <a id="appendixa"></a>Appendix A - Git Command Line
 
-#### Create a Local Git Repository
+#### 8.1.1. Create a Local Git Repository
 When creating a new Git project on your local machine, first create a new [repository](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository), aka **repo**.  
 
 <div style="background-color: #e7f3fe;
@@ -392,7 +470,7 @@ Without further ado, let's create our Git repo, by performing steps similar to t
 		in /Users/Michael/ADevelopment/
 		Programming/git-github-notes/.git/
 		
-#### Handle Files in the Git Repo
+#### 8.1.2. Handle Files in the Git Repo
 
 1. Let's add a **README.md** file to the repo. In your favorite text editor create the file and save it in the repo directory. 
 2. Check the status.
@@ -446,7 +524,7 @@ Git noticed that the README.md file has been added to the repo, unless you use t
 		working tree clean	
 			
 
-### Create a Branch
+### 8.2. Create a Branch
 
 If you want to create something new, it is best not to make changes to the main project while developing your new work. This is where [git branches](https://git-scm.com/book/en/v1/Git-Branching-What-a-Branch-Is) comes in. 
 
@@ -525,14 +603,7 @@ Notice the file **GitGitHubNotes.md** is the same file we are working on right n
 1. 
   
   
-## Custom Styles
-<div class="danger">Keep this section. It contains custom styles. To see the styles switch this section to edit mode.</div>     
-<br/>
-<div class="danger">Danger</div>
-<div class="warning">Warning</div>
-<div class="success">Success</div>
-<div class="info">Info</div>
-<div class="other">Other</div>
+## 9. References
 
-
-
+- [Git documentation](https://git-scm.com/doc)
+- [About Git](https://docs.github.com/en/get-started/using-git/about-git)

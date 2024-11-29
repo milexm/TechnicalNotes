@@ -1,4 +1,4 @@
-# GitHub Notes <!-- omit from toc -->
+# GitHub notes <!-- omit from toc -->
 
  **Git** is a revision control system, a **tool** to manage your source code history on your local machine. Git has a pretty steep learning curve compared to many other systems. It is a painstaking process. For more information, see [GitNotes](GitNotes.md).
 
@@ -21,12 +21,12 @@ To shorten your GitHub file address go to
     - [1.1.2. Publish Local Git Repository to GitHub](#112-publish-local-git-repository-to-github)
     - [1.1.3. Add information to README.md](#113-add-information-to-readmemd)
 - [2. GitHub](#2-github)
-  - [2.1. GitHub Getting Started](#21-github-getting-started)
-    - [2.1.1. Create a Repository](#211-create-a-repository)
+  - [2.1. GitHub getting started](#21-github-getting-started)
+    - [2.1.1. Create a repository](#211-create-a-repository)
 - [3. GitHub Hello World](#3-github-hello-world)
-  - [3.1. Create a Repository](#31-create-a-repository)
-  - [3.2. Create a Branch](#32-create-a-branch)
-  - [3.3. Commit Changes](#33-commit-changes)
+  - [3.1. Create a repository](#31-create-a-repository)
+  - [3.2. Create a branch](#32-create-a-branch)
+  - [3.3. Commit changes](#33-commit-changes)
   - [3.4. Open a Pull Request](#34-open-a-pull-request)
   - [3.5. Merge Pull Request](#35-merge-pull-request)
 - [4. Glossary](#4-glossary)
@@ -75,13 +75,13 @@ The first steps you want to perform is to install **Git**.
 ~~5. In the right pane, click the **Push origin** button. This publishes the file to your GitHub repository. ~~ 
 
 > [!WARNING]  
-> Use [GitHub desktop](https://desktop.github.com/)  desktop instead .
+> Use [GitHub desktop](https://desktop.github.com/)  desktop instead . For more informations, see [About GitHub Desktop](https://docs.github.com/en/desktop/overview/about-github-desktop).
 
 ## 2. GitHub
 
 [GitHub](https://github.com/) is a hosting service for Git repositories. It is a hosting platform for version control and collaboration. It allows people to work on common projects from everywhere.
 
-### 2.1. GitHub Getting Started
+### 2.1. GitHub getting started
 
 This section shows how to get started with GitHub. In particular it demonstrates how to:
 
@@ -90,7 +90,7 @@ This section shows how to get started with GitHub. In particular it demonstrates
 - Make changes to a file and push them to GitHub as commits
 - Open and merge a pull request
 
-#### 2.1.1. Create a Repository
+#### 2.1.1. Create a repository
 
 A repository is usually used to organize a single project. Repositories can contain folders and files, images, videos, spreadsheets, and data sets; anything your project needs. It is recommended to include a README, or a file with information about your project. GitHub makes it easy to add one at the same time you create your new repository. It also offers other common options such as a license file.
 
@@ -107,7 +107,7 @@ Your repository can be a place where to store ideas, resources, or even share an
 1. Click the **Create repository** button.
 The following picture shows an example of a repository creation:
 
-![create new repository](../Resources/Images/GitHub/create_new_repository.png)
+    ![create new repository](../Resources/Images/GitHub/create_new_repository.png)
 
 ## 3. GitHub Hello World
 
@@ -121,7 +121,7 @@ You’ll learn how to:
 - Make changes to a file and push them to GitHub as commits
 - Open and merge a pull request
 
-### 3.1. Create a Repository
+### 3.1. Create a repository
 
 A repository is usually used to organize a single project. Repositories can contain folders and files, images, videos, spreadsheets, and data sets; anything your project needs. It is recommended to include a README, or a file with information about your project. GitHub makes it easy to add one at the same time you create your new repository. It also offers other common options such as a license file.
 
@@ -134,7 +134,7 @@ Your hello-world repository can be a place where to store ideas, resources, or e
 4. Write a short description. Select Initialize this repository with a **README**.
 5. If needed add a **LICENSE** file
 
-### 3.2. Create a Branch
+### 3.2. Create a branch
 
 Branching is the way to work on different versions of a repository at one time.
 By default the repository has one branch named **master** which is considered to be the definitive branch.
@@ -144,11 +144,11 @@ By default the repository has one branch named **master** which is considered to
 Let's use branches to experiment and make edits before committing them to master.
 
 1. Go to the repository **hello-world**.
-2. Click the drop-down on the upper left at the top of the file list that says **Branch: master**.
-3. Type the branch name *readme-edits* into the new branch text box.
-4. Select the blue **Create branch** box or click **Enter** on your keyboard.
+1. Click the drop-down on the upper left at the top of the file list that says **Branch: master**.
+1. Type the branch name *readme-edits* into the new branch text box.
+1. Select the blue **Create branch** box or click **Enter** on your keyboard.
 
-### 3.3. Commit Changes
+### 3.3. Commit changes
 
 Now, you’re on the code view for your readme-edits branch, which is a copy of master. You know that you are in the new branch from the drop-down on the upper left on the top of the file list **Branch: readme-edits**. As matter of fact, from the drop-down you can switch between branches, i.e. *master* and *readme-edits* in our case.
 Let’s make some edits in the *readme-edits* branch.
@@ -292,7 +292,5 @@ The technique shown in [Custom Styles](#custom_styles) section work on your loca
 
 ## 8. References
 
-|Link|Description|
-|----|-----------|
-|[GitHub Guides](http://guides.github.com/) <img width=200px/>|GitHub basic components|
-|[https://git.io/](https://git.io/)|Shorten your GitHub address|
+- [GitHub desktop documentation](https://docs.github.com/en/desktop/)
+- [GitHub Docs](http://guides.github.com/) - GitHub documentation hub.

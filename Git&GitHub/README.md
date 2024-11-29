@@ -15,3 +15,5 @@ more information, see [Git](../Git&GitHub/git_notes.md).
 
 - [Git](../Git&GitHub/git_notes.md)
 - [GitHub](../Git&GitHub/github_notes.md)
+- [GitHub error handling](../Git&GitHub/github_error_handling.md)
+- [GitHub process](../Git&GitHub/github_process.md)
