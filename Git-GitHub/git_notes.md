@@ -255,7 +255,6 @@ Let's now **create a Git repository** out of the `git-basics` directory and **co
 	[master (root-commit) 0d2d51d] First commit.
  	1 file changed, 1 insertion(+)
  	create mode 100644 greeting
-
 To create a new Git repository locally, simply go to the directory 
 you want to add version control to and type: `git init`.
 
@@ -271,7 +270,6 @@ If you have existing files you want to add to your new repository, type:
 This will add all of your current files into your new repository and
 index and then create your first commit object, pointing your new master
 branch to it. 
-
 
 Let's check what has been stored in the `git` folder so far.
 
