@@ -170,8 +170,8 @@ Let's explore some of Git internals to better understand its mechanincs and fund
 Git stores different types of objects in ``.git/objects``. Git objects contain the actual data, they represent the main entities that make up the repository. There are **four main object types**, that is: 
 
 - **commit**
-- **tree**
 - **blob**
+- **tree**
 - **annotated tag**
   
 The first three being the most important to really understand the main functions. Each object is compressed (with Zlib) and referenced by the SHA-1 value of its contents plus a small header. In the examples, we will use the first 6 characters of the SHA-1 for simplicity, but the actual value is 40 characters long.
@@ -207,9 +207,13 @@ The difference between a Git **blob** and a filesystem’s file is that a blob *
 
 #### 3.2.1. The blob
 
-Let's get a better handle of the concepts described so far. Let's create a sample Git repository, and show how Git works from the bottom up. For more information, see [Git from the bottom up](https://jwiegley.github.io/git-from-the-bottom-up/).
+Let's get a better handle of the concepts described so far. Let's create a sample Git repository, and show how Git works from the bottom up. For more information, see [Git from the bottom up](https://jwiegley.github.io/git-from-the-bottom-up/). To make the things simple, let's start a new repository locally on your computer. 
+
+> [!WARNING]
+> At this point, we are not talking about remote repository hosted on GitHub. 
  
-1. In a terminal window, create a directory and switch to it. 
+1. In a terminal window, create a directory and switch to it. In my example the directoy path is: `C:\GitHub\milexm\git-basics`
+
 
 		mkdir git-basics
  		cd git-basics
@@ -242,19 +246,34 @@ Obviously, if you change the file content, the ID will be different, because the
 
 #### Commit
 
-Let's now create a Git repository and commit the greting file into it. We are going to do this all in one step right now, but then we'll come back and do it again in stages so you can see what’s going on. 
+Let's now **create a Git repository** out of the `git-basics` directory and **commit** **the greting file into it**. We are going to do this all in one step right now, but then we'll come back and do it again in stages so you can see what’s going on. Open a terminal window in the `git-basics` directory and performn the steps shown below. 
 
-	$ git init
-	Initialized empty Git repository in 
-	/Users/Michael/ADevelopment/TechNotes/
-	git-basics/.git/
-	$ git add greeting
-	$ git commit -m "First commit."
-	[master (root-commit)  d907184] First commit.
-	1 file changed, 1 insertion(+)
-	create mode 100644 greeting
- 
-Let's check what has been stored in the repository so far.
+	> git init
+	Initialized empty Git repository in C:/GitHub/milexm/git-basics/.git/
+	> git add greeting
+	> git commit -m "First commit."
+	[master (root-commit) 0d2d51d] First commit.
+ 	1 file changed, 1 insertion(+)
+ 	create mode 100644 greeting
+
+
+To create a new Git repository locally, simply go to the directory 
+you want to add version control to and type: `git init`.
+
+The  `git init` command creates a `.git` directory in the `git-basics` directory. The `.git` folder contains several elements as shown in the following picture.
+
+![git_folder_elements](../Resources/Images/GitHub/git_folder_elements.png)
+
+If you have existing files you want to add to your new repository, type:
+	
+	> git add .
+	> git commit -m ‘my first commit’
+
+This will add all of your current files into your new repository and
+index and then create your first commit object, pointing your new master
+branch to it. 
+
+Git Let's check what has been stored in the repository so far.
 
 1. Find stored objects
 	
