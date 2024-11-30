@@ -256,11 +256,10 @@ Let's now **create a Git repository** out of the `git-basics` directory and **co
  	1 file changed, 1 insertion(+)
  	create mode 100644 greeting
 
-
 To create a new Git repository locally, simply go to the directory 
 you want to add version control to and type: `git init`.
 
-The  `git init` command creates a `.git` directory in the `git-basics` directory. The `.git` folder contains several elements as shown in the following picture.
+The  `git init` command creates a `.git` directory in the `git-basics` directory. When you create a new Git repository, the .git folder is created in the root directory of your directory (project). Inside this folder, you'll find a variety of files and folders that contain information about your codebase as shown in the following picture.
 
 ![git_folder_elements](../Resources/Images/GitHub/git_folder_elements.png)
 
@@ -273,7 +272,8 @@ This will add all of your current files into your new repository and
 index and then create your first commit object, pointing your new master
 branch to it. 
 
-Git Let's check what has been stored in the repository so far.
+
+Let's check what has been stored in the `git` folder so far.
 
 1. Find stored objects
 	
