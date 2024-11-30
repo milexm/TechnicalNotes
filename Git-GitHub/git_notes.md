@@ -214,6 +214,7 @@ Let's get a better handle of the concepts described so far. Let's create a sampl
  
 1. In a terminal window, create a directory and switch to it. In my example the directoy path is: `C:\GitHub\milexm\git-basics`
 
+
 		mkdir git-basics
  		cd git-basics
 
@@ -242,7 +243,6 @@ Obviously, if you change the file content, the ID will be different, because the
 
 > [!NOTE]
 > The previous code example uses the Markdown syntax to display code blocks. To create a code block you must enter four spaces or one tab in relation to the previous block. For more information, see [How do you add code blocks in Markdown?](https://itsfoss.com/markdown-code-block/). 
-
 
 #### Commit
 
