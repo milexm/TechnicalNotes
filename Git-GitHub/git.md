@@ -34,8 +34,12 @@ is the service for projects that use Git.
   - [4.1. Blob](#41-blob)
   - [4.2. Commit](#42-commit)
   - [4.3. Tree](#43-tree)
-- [5. Glossary](#5-glossary)
-- [6. References](#6-references)
+- [5. Git internals](#5-git-internals)
+  - [5.1. Commit relationships](#51-commit-relationships)
+  - [5.2. Role of tree bbjects](#52-role-of-tree-bbjects)
+  - [5.3. Summary](#53-summary)
+- [6. Glossary](#6-glossary)
+- [7. References](#7-references)
 
 ## 1. Git overview
 
@@ -236,7 +240,6 @@ Summarizing:
 
 This is a typical structure:
 
-
     Commit
     |
     └── Tree
@@ -246,19 +249,25 @@ This is a typical structure:
                ├── Blob (subfile1.txt)
                └── Blob (subfile2.txt)
 
-For more information, see [Git Internals - Git Objects](https://git-scm.com/book/en/v2/Git-Internals-Git-Objects).
+For more information, see  [Git internals](#5-git-internals)
 
 ## 4. Examples of blob, tree, and commit
 
-Let's get a better handle of the concepts described so far. Let's create a sample Git repository, and show how Git works from the bottom up. For more information, see [Git from the bottom up](https://jwiegley.github.io/git-from-the-bottom-up/). To make the things simple, let's start a new repository locally on your computer.
+Let's get a better handle of the concepts described so far. Let's create
+a sample Git repository, and show how Git works from the bottom up. For
+more information, see [Git from the bottom
+up](https://jwiegley.github.io/git-from-the-bottom-up/). To make the
+things simple, let's start a new repository locally on your computer.
 
 ### 4.1. Blob
 
-
 Starting from scratch, first you create a new repository in the directory where your project (files) are located. For more information, see [Git Basics - Getting a Git Repository](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository).
 
-> [!NOTE]
-> The following code example uses the Markdown syntax to display code blocks. To create a code block you must enter four spaces or one tab in relation to the previous block. For more information, see [How do you add code blocks in Markdown?](https://itsfoss.com/markdown-code-block/).
+> [!NOTE] The following code example uses the Markdown syntax to display
+> code blocks. To create a code block you must enter four spaces or one
+> tab in relation to the previous block. For more information, see [How
+> do you add code blocks in
+> Markdown?](https://itsfoss.com/markdown-code-block/).
 
 1. Create a repository.
 
@@ -281,7 +290,9 @@ Starting from scratch, first you create a new repository in the directory where 
 
         echo 'Hello, WORLD!' > greetings
 
-    Let's calculate the blob ID (SHA1 ID) of the file. Obviously, if you change the file content, the ID will be different, because the file content is different as shown in this example.
+    Let's calculate the blob ID (SHA1 ID) of the file. Obviously, if you
+    change the file content, the ID will be different, because the file
+    content is different as shown in this example.
 
         git hash-object greetings
         ed059abde7c93586fa6d729a31ef4bea628f37c4
@@ -319,7 +330,9 @@ Starting from scratch, first you create a new repository in the directory where 
         GitHub\milexm\Git-Basics\.git\objects\info
         GitHub\milexm\Git-Basics\.git\objects\pack
 
-1. Let's check what kind of objects have been stored. Note thet the first 2 digits refer to the directory where the object is stored, the reminders identify the object itself.
+1. Let's check what kind of objects have been stored. Note thet the
+   first 2 digits refer to the directory where the object is stored, the
+   reminders identify the object itself.
 
         > git cat-file -t 1a1e113f586493efb81aea6547c71e046850adee
         tree
@@ -328,7 +341,9 @@ Starting from scratch, first you create a new repository in the directory where 
         > git cat-file -t f4c6f013c39854b93aa4290facd82731beed0ae4
         commit
 
-As a convenience, Git requires only as many digits of the object hash id as are necessary to uniquely identify it within the repository. Usually just six or seven digits suffce. See the following example:
+As a convenience, Git requires only as many digits of the object hash id
+as are necessary to uniquely identify it within the repository. Usually
+just six or seven digits suffce. See the following example:
 
         > git cat-file -t ed059ab
         blob
@@ -338,12 +353,17 @@ As a convenience, Git requires only as many digits of the object hash id as are 
         > git cat-file blob ed059ab
         'Hello, WORLD!'
 
-    As you can see the blob is in the repository and it contains the content we expected. It will always have this same identifier, no matter how long the repository lives or where the file within it is stored. This particular content is now verifiably preserved, forever.
+    As you can see the blob is in the repository and it contains the
+    content we expected. It will always have this same identifier, no
+    matter how long the repository lives or where the file within it is
+    stored. This particular content is now verifiably preserved,
+    forever.
 
-> [!IMPORTANT]
-> Git blob represents the fundamental data unit in Git.Really, the whole **Git system is about blob management**.
+> [!IMPORTANT] Git blob represents the fundamental data unit in
+> Git.Really, the whole **Git system is about blob management**.
 
-The **commit** object contains the directory tree object hash, parent commit hash, author, committer, date and message as shown next:
+The **commit** object contains the directory tree object hash, parent
+commit hash, author, committer, date and message as shown next:
 
     > git log
     commit f4c6f013c39854b93aa4290facd82731beed0ae4 (HEAD -> master)
@@ -356,16 +376,23 @@ The **commit** object contains the directory tree object hash, parent commit has
 
 ### 4.3. Tree
 
-The file contents are stored in blobs, which are featureless. They have no name, no structure. They are “blobs”, after all.
+The file contents are stored in blobs, which are featureless. They have
+no name, no structure. They are “blobs”, after all.
 
-In order to represent the structure and naming of files, Git attaches these blobs to a tree as leaf nodes. Let's see where the blob we created lives. Here we go.
+In order to represent the structure and naming of files, Git attaches
+these blobs to a tree as leaf nodes. Let's see where the blob we created
+lives. Here we go.
 
     > git ls-tree HEAD
     100644 blob ed059abde7c93586fa6d729a31ef4bea628f37c4    greetings
 
-The first commit added the greetings file to the repository. The commit contains one tree, which has a single leaf that is the greetings content blob.  
+The first commit added the greetings file to the repository. The commit
+contains one tree, which has a single leaf that is the greetings content
+blob.  
 
-Although we can look at the tree containing the blob by passing HEAD to ls-tree, we haven’t yet seen the underlying tree object referenced by that commit. Here are a few other commands to discover the tree.
+Although we can look at the tree containing the blob by passing HEAD to
+ls-tree, we haven’t yet seen the underlying tree object referenced by
+that commit. Here are a few other commands to discover the tree.
 
 1. Decode the HEAD alias of the commit it references.
 
@@ -377,36 +404,180 @@ Although we can look at the tree containing the blob by passing HEAD to ls-tree,
         > git cat-file -t HEAD
         commit
 
-1. Get the hash ID of the tree held by the commit, as well as other info stored in the commit object.
+1. Get the hash ID of the tree held by the commit, as well as other info
+   stored in the commit object.
 
         > git cat-file commit HEAD
         tree 1a1e113f586493efb81aea6547c71e046850adee
         author integrated Git <milexm@gmail.com> 1733107506 -0800
         committer integrated Git <milexm@gmail.com> 1733107506 -0800
 
-    Note tha the hash ID of the commit is unique to my repository because it includes my name and the date of the commit.
-    But the hash ID of the tree is always the same. Let's verify it:
+    Note tha the hash ID of the commit is unique to my repository
+    because it includes my name and the date of the commit. But the hash
+    ID of the tree is always the same. Let's verify it:
 
         > git ls-tree 1a1e113f
         100644 blob ed059abde7c93586fa6d729a31ef4bea628f37c4    greetings
 
-    As you can see the repository contains a single commit, which references a tree that holds a blob containing the recorded content.
+    As you can see the repository contains a single commit, which
+    references a tree that holds a blob containing the recorded content.
 
-## 5. Glossary
+## 5. Git internals
 
-- **Working tree**. A working tree is **any directory on your filesystem which has a repository associated with it**, typically indicated by the presence of a sub-directory within it named **.git.**. It includes all the files and sub-directories in that directory.
-- **Repository**. It is a collection of commits, each of which is an archive of what the project’s working tree looked like at a past date, whether on your machine or someone else’s. It also defines the **HEAD** which identifies the branch or commit the current working tree originated from. Lastly, it contains a set of branches and tags, to identify certain commits by name.
-- **HEAD**. It is used by the repository to define what is currently checked out, specifically:
-  - If you checkout a branch, the HEAD symbolically refers to that branch, indicating that the branch name should be updated after the next commit operation.
-  - If you checkout a specific commit, HEAD refers to that commit only. This is referred to as a detached HEAD, and occurs, for example, if you check out a tag name.
-- **Commit**. A commit is a snapshot of your working tree at some point in time. The state of the HEAD at the time your commit is made becomes that commit’s parent. This is what creates the notion of a **revision history**.
-- **Branch**. A branch is just a name for a commit. It is also called a reference. It is the parentage of a commit which defines its history, and thus the typical notion of a “branch of development”.
-- **Tag**. A tag is also a name for a commit, similar to a branch, but it always refers to the same commit. It can have its own description text.
-- **Index**. Git does not commit changes directly from the working tree into the repository. Instead, it registers them in the **index**. It is a way of “confirming” your changes, one by one, before doing a commit, which records all your approved changes at once. Some call it the **staging area**, instead.
-- **Master**. The mainline of development in most repositories is done on a branch called “**master**”. Although this is a typical default, there is nothing special about this branch.
-- **Origin**.  It is a shorthand name for the remote repository that a project was originally cloned from. More precisely, it is used instead of that original repository's URL and thereby makes referencing much easier.
+Git manages a repository using three fundamental object types: **blob**,
+**tree**, and **commit**. 
 
-## 6. References
+> [!IMPORTANT]
+> These objects work together to represent the state of
+your project and its history.
+
+Let's aaume that we have two files; `greetings.txt` and `walk.txt`, and
+we have made three commits so far. The following is the snapshot of the
+repository.
+
+    Commit 1
+    |
+    v
+    Tree 1
+    |
+    +-- Blob v1 (greetings.txt)
+    +-- Blob v1 (walk.txt)
+    |
+    +-- Commit 2
+            |
+            v
+        Tree 2
+            |
+            +-- Blob v2 (greetings.txt)
+            +-- Blob v2 (walk.txt)
+            |
+            +-- Commit 3 (master)
+                |
+                v
+            Tree 3
+                |
+                +-- Blob v3 (greetings.txt)
+                +-- Blob v3 (walk.txt)
+                |
+                HEAD -> master -> Commit 3
+
+This structure clearly shows the lineage of commits:
+
+- Commit 1 points to Tree 1, which contains Blob v1 for both
+  `greetings.txt` and `walk.txt`.
+- Commit 2 is connected to Tree 2, which has Blob v2 versions.
+- Commit 3 (the master branch) points to Tree 3, with Blob v3 versions.
+
+This properly visualizes that Commit 2 follows Commit 1 and Commit 3
+follows Commit 2, all while HEAD is at Commit 3.
+
+### 5.1. Commit relationships
+
+1. **Commit 1 and Commit 2**
+
+    Commit 2 is the child of Commit 1. It references Commit 1 as its
+    parent. This relationship is established when a new commit is
+    created after making changes to the repository. Commit 2 builds on
+    the state of Commit 1, recording what has changed.
+
+1. **Commit 2 and Commit 3**
+
+    Similarly, Commit 3 is the child of Commit 2 and references Commit 2
+    as its parent.
+
+The sequence **Commit 1 -> Commit 2 -> Commit 3** represents the history of
+changes in the repository. Each commit contains:
+
+- A reference to its parent (except for the initial commit).
+- A snapshot of the repository state in the form of a tree object.
+
+### 5.2. Role of tree bbjects 
+
+Tree objects are **snapshots** of the directory structure at the time of a
+commit. Each commit points to a tree object that represents:
+
+- The **state of the files in the repository** at that commit.
+- The paths, filenames, and references to blobs (file contents) or
+subtrees (subdirectories). For example:
+
+- Tree 1: Represents the directory structure and file content (Blob v1
+  for greetings.txt and walk.txt) as recorded in Commit 1.
+- Tree 2: Represents the updated state of the directory after Commit 2.
+  If greetings.txt and walk.txt were modified, Tree 2 points to Blob v2
+  versions of these files.
+- Tree 3: Represents the final state of the directory after Commit 3,
+  with Blob v3 versions of the files.
+
+### 5.3. Summary
+
+1. Commits form a chain
+
+   - Each commit references a parent commit, creating a linear history
+     (or branching if needed).
+   - Commits store a pointer to a tree object that reflects the
+     repository state at that moment.
+
+1. Tree objects define the state
+
+   - Each tree object represents the directory structure and file
+     contents as blobs at a specific point in time.
+
+1. Blobs hold the file contents
+
+   - Blobs are the actual data objects for the files. Different versions
+     of a file (v1, v2, v3) are stored as separate blobs.
+
+This structure ensures Git efficiently tracks changes by referencing
+**immutable** objects, enabling powerful features like **branching**, **merging**,
+and **rebasing**.
+
+For more information, see [Git Internals - Git Objects](https://git-scm.com/book/en/v2/Git-Internals-Git-Objects).
+
+
+## 6. Glossary
+
+- **Working tree**. A working tree is **any directory on your filesystem
+  which has a repository associated with it**, typically indicated by
+  the presence of a sub-directory within it named **.git.**. It includes
+  all the files and sub-directories in that directory.
+- **Repository**. It is a collection of commits, each of which is an
+  archive of what the project’s working tree looked like at a past date,
+  whether on your machine or someone else’s. It also defines the
+  **HEAD** which identifies the branch or commit the current working
+  tree originated from. Lastly, it contains a set of branches and tags,
+  to identify certain commits by name.
+- **HEAD**. It is used by the repository to define what is currently
+  checked out, specifically:
+  - If you checkout a branch, the HEAD symbolically refers to that
+    branch, indicating that the branch name should be updated after the
+    next commit operation.
+  - If you checkout a specific commit, HEAD refers to that commit only.
+    This is referred to as a detached HEAD, and occurs, for example, if
+    you check out a tag name.
+- **Commit**. A commit is a snapshot of your working tree at some point
+  in time. The state of the HEAD at the time your commit is made becomes
+  that commit’s parent. This is what creates the notion of a **revision
+  history**.
+- **Branch**. A branch is just a name for a commit. It is also called a
+  reference. It is the parentage of a commit which defines its history,
+  and thus the typical notion of a “branch of development”.
+- **Tag**. A tag is also a name for a commit, similar to a branch, but
+  it always refers to the same commit. It can have its own description
+  text.
+- **Index**. Git does not commit changes directly from the working tree
+  into the repository. Instead, it registers them in the **index**. It
+  is a way of “confirming” your changes, one by one, before doing a
+  commit, which records all your approved changes at once. Some call it
+  the **staging area**, instead.
+- **Master**. The mainline of development in most repositories is done
+  on a branch called “**master**”. Although this is a typical default,
+  there is nothing special about this branch.
+- **Origin**.  It is a shorthand name for the remote repository that a
+  project was originally cloned from. More precisely, it is used instead
+  of that original repository's URL and thereby makes referencing much
+  easier.
+
+## 7. References
 
 - [Git official documnetation](https://git-scm.com/doc)
   - [Pro Git](https://git-scm.com/book/en/v2) - The book online
