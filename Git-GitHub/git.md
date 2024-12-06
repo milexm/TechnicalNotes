@@ -261,7 +261,6 @@ things simple, let's start a new repository locally on your computer.
 
 ### 4.1. Blob
 
-
 Starting from scratch, first you create a new repository in the directory where your project (files) are located. For more information, see [Git Basics - Getting a Git Repository](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository).
 
 > [!NOTE] The following code example uses the Markdown syntax to display
