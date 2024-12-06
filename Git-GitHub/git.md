@@ -8,6 +8,7 @@
 ![git icon](../Resources/Images/Git/git.png)
 
 These notes which leverage many sources, listed in the References section attempt to explain Git in simple terms. The goal is to understand Git internals and its usage at a fundamental level.
+
 If you are used to the SCM (Software Configuration Management) world, put that knowledge aside and start from a clean slate **'cause Git aint SCM**.
 
 These notes explain Git basics. For information about GitHub, see [GitHub notes](github_notes.md).
@@ -48,6 +49,7 @@ than other version control tools. Some of the information shown below
 has been adapted fromn [Git Internals
 PDF](https://github.com/pluralsight/git-internals-pdf/releases/tag/v2.0)
 written by guru Scott Chacon.
+
 See [How did Git get its name?](https://initialcommit.com/blog/How-Did-Git-Get-Its-Name).
 
 According to Scott, Git is a **stupid content tracker**. It is a really
@@ -259,10 +261,8 @@ things simple, let's start a new repository locally on your computer.
 
 ### 4.1. Blob
 
-Starting from scratch, first you create a new repository in the
-directory where your project (files) are located. For more information,
-see [Git Basics - Getting a Git
-Repository](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository).
+
+Starting from scratch, first you create a new repository in the directory where your project (files) are located. For more information, see [Git Basics - Getting a Git Repository](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository).
 
 > [!NOTE] The following code example uses the Markdown syntax to display
 > code blocks. To create a code block you must enter four spaces or one
@@ -306,7 +306,7 @@ Repository](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository).
     resides on my machine, or on yours, or in GitHub its SHA ID is
     always the same and refers always to the same file. It is the file
     **fingerprint**.
-
+    
 ### 4.2. Commit
 
  Let's now add the `greetings` file to the repository.
@@ -587,7 +587,7 @@ For more information, see [Git Internals - Git Objects](https://git-scm.com/book
   - [Git References](https://git-scm.com/docs)
 - [Git Internals PDF](https://github.com/pluralsight/git-internals-pdf/releases/tag/v2.0). Source code control and beyond by guru Scott Chacon.
 - [Git Cheat Sheet](https://about.gitlab.com/images/press/git-cheat-sheet.pdf)
-  
+
   <!-- more links -->
 
 - [A Visual Git Reference](https://marklodato.github.io/visual-git-guide/index-en.html). This page gives a brief, visual reference for the most common commands in git.
