@@ -103,11 +103,15 @@ to the index (stage). Once the index contains everything you intend to
 commit, you record its content in the repository. Here’s a simple
 diagram that shows a typical project’s life-cycle:
 
+![basic_life_cycle](../Resources/Images/Git/basic_life_cycle.png)
+
 ## 2. Git architecture
 
 Git is not a single binary, but a collection of small specialized
 programs, which sometimes is annoying to people trying to learn Git, but
 is very useful when you want to do anything nonstandard with it.
+
+Install the Git command line tool. For information, see [Getting Started - Installing Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git). 
 
 > [!NOTE]
 > Git is not a monolithic program but a toolkit whose components
@@ -280,21 +284,21 @@ Starting from scratch, first you create a new repository in the directory where 
 
 1. Create a greetings text file.
 
-        echo 'Hello, world!' > greetings
+        > echo 'Hello, world!' > greetings
 
     Let's calculate the blob ID (SHA1 ID) of the file.
 
-        git hash-object greetings
+        > git hash-object greetings
         5f831d630dd069aca58b3a164ff526b53c142456
 1. Let's change the greetings text file.
 
-        echo 'Hello, WORLD!' > greetings
+        > echo 'Hello, WORLD!' > greetings
 
     Let's calculate the blob ID (SHA1 ID) of the file. Obviously, if you
     change the file content, the ID will be different, because the file
     content is different as shown in this example.
 
-        git hash-object greetings
+        > git hash-object greetings
         ed059abde7c93586fa6d729a31ef4bea628f37c4
 
     > [!IMPORTANT]
@@ -305,7 +309,7 @@ Starting from scratch, first you create a new repository in the directory where 
     resides on my machine, or on yours, or in GitHub its SHA ID is
     always the same and refers always to the same file. It is the file
     **fingerprint**.
-    
+
 ### 4.2. Commit
 
  Let's now add the `greetings` file to the repository.
