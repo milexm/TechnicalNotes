@@ -20,6 +20,11 @@ This topic contains a description of essential Git commands.
     - [3.3.1. Steps to use rebase](#331-steps-to-use-rebase)
     - [3.3.2. Rebase vs. Pull with rebase](#332-rebase-vs-pull-with-rebase)
   - [3.4. Common workflows with rebase](#34-common-workflows-with-rebase)
+- [4. Essential Git commands](#4-essential-git-commands)
+  - [4.1. Setup and configuration](#41-setup-and-configuration)
+  - [4.2. Working with changes](#42-working-with-changes)
+  - [4.3. Viewing history](#43-viewing-history)
+
 
 ## 1. Squash and merge
 
@@ -238,3 +243,27 @@ To fetch updates from a remote branch and rebase instead of merging.
 
         >git rebase main feature
 
+## 4. Essential Git commands
+
+Here’s a list of essential Git commands grouped by their functionality.
+
+### 4.1. Setup and configuration
+
+- `git init`. Initialize a new Git repository in the current directory.
+- `git clone <repo-url>`. Clone an existing repository from a remote
+  location.
+- `git config --global user.name "<name>"`. Set your name for all
+  repositories.
+- `git config --global user.email "<email>"`. Set your email for all
+  repositories.
+
+### 4.2. Working with changes
+
+- `git status`. Show the status of the working directory and staging
+  area.
+- `git add <file>`. Stage changes for a specific file.
+- git `add .`. Stage changes for all modified and new files.
+- `git commit -m "<message>"`. Commit staged changes with a descriptive
+  message.
+
+### 4.3. Viewing history

@@ -38,8 +38,12 @@ is the service for projects that use Git.
   - [5.1. Commit relationships](#51-commit-relationships)
   - [5.2. Role of tree bbjects](#52-role-of-tree-bbjects)
   - [5.3. Summary](#53-summary)
-- [6. Glossary](#6-glossary)
-- [7. References](#7-references)
+- [6. Git staging area (aka Index)](#6-git-staging-area-aka-index)
+  - [6.1. How the staging area works](#61-how-the-staging-area-works)
+  - [6.2. Why Uue the staging area?](#62-why-uue-the-staging-area)
+  - [6.3. Basic commands for staging](#63-basic-commands-for-staging)
+- [7. Glossary](#7-glossary)
+- [8. References](#8-references)
 
 ## 1. Git overview
 
@@ -96,14 +100,6 @@ If you are used to the SCM (Software Configuration Management) world, put that k
     Git is very efficient. Most operations are local, which reduces
     unnecessary network overhead. Repositories are generally packed very
     efficiently, which often leads to surprisingly small repo sizes.
-
-After creating a repository, you do your work in the working tree. Once
-your work reaches a significant point, you add your changes successively
-to the index (stage). Once the index contains everything you intend to
-commit, you record its content in the repository. Here’s a simple
-diagram that shows a typical project’s life-cycle:
-
-![basic_life_cycle](../Resources/Images/Git/basic_life_cycle.png)
 
 ## 2. Git architecture
 
@@ -537,8 +533,40 @@ and **rebasing**.
 
 For more information, see [Git Internals - Git Objects](https://git-scm.com/book/en/v2/Git-Internals-Git-Objects).
 
+## 6. Git staging area (aka Index)
 
-## 6. Glossary
+The Git **staging area** (also called the **index**) is a middle layer in the Git workflow that sits **between your working directory and your repository**. It plays a critical role in tracking and preparing changes for commits.
+
+### 6.1. How the staging area works
+
+- **Working Directory**. The place where you make changes to your files.
+  Files in this state are untracked or modified.
+- **Staging Area**. A temporary storage area where you can group changes
+  that will be included in your next commit. Files are staged here.
+- **Repository**. The final destination for your changes when you create
+  a commit. Files here are committed.
+
+After creating a repository, you do your work in the working tree. Once
+your work reaches a significant point, you add your changes successively
+to the index (stage). Once the index contains everything you intend to
+commit, you record its content in the repository. Here’s a simple
+diagram that shows a typical project’s life-cycle:
+
+![basic_life_cycle](../Resources/Images/Git/basic_life_cycle.png)
+
+### 6.2. Why Uue the staging area?
+
+- **Select Specific Changes**. Allows you to choose exactly which
+  changes to include in a commit, even if other changes exist in your
+  working directory.
+- **Prepare Commits Gradually**. Lets you stage changes incrementally,
+  ensuring commits are meaningful and focused.
+- R**eview Changes**. Gives you an opportunity to inspect staged changes
+  before finalizing them into a commit.
+
+### 6.3. Basic commands for staging 
+
+## 7. Glossary
 
 - **Working tree**. A working tree is **any directory on your filesystem
   which has a repository associated with it**, typically indicated by
@@ -581,7 +609,7 @@ For more information, see [Git Internals - Git Objects](https://git-scm.com/book
   of that original repository's URL and thereby makes referencing much
   easier.
 
-## 7. References
+## 8. References
 
 - [Git official documnetation](https://git-scm.com/doc)
   - [Pro Git](https://git-scm.com/book/en/v2) - The book online
