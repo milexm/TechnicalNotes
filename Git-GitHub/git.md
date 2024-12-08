@@ -38,10 +38,10 @@ is the service for projects that use Git.
   - [5.1. Commit relationships](#51-commit-relationships)
   - [5.2. Role of tree bbjects](#52-role-of-tree-bbjects)
   - [5.3. Summary](#53-summary)
-- [Git staging area (aka INdex)](#git-staging-area-aka-index)
-  - [How the staging area works](#how-the-staging-area-works)
-- [6. Glossary](#6-glossary)
-- [7. References](#7-references)
+- [6. Git staging area (aka Index)](#6-git-staging-area-aka-index)
+  - [6.1. How the staging area works](#61-how-the-staging-area-works)
+- [7. Glossary](#7-glossary)
+- [8. References](#8-references)
 
 ## 1. Git overview
 
@@ -532,11 +532,11 @@ and **rebasing**.
 
 For more information, see [Git Internals - Git Objects](https://git-scm.com/book/en/v2/Git-Internals-Git-Objects).
 
-## Git staging area (aka INdex)
+## 6. Git staging area (aka Index)
 
 The Git **staging area** (also called the **index**) is a middle layer in the Git workflow that sits **between your working directory and your repository**. It plays a critical role in tracking and preparing changes for commits.
 
-### How the staging area works
+### 6.1. How the staging area works
 
 - **Working Directory**. The place where you make changes to your files.
   Files in this state are untracked or modified.
@@ -554,8 +554,7 @@ diagram that shows a typical project’s life-cycle:
 ![basic_life_cycle](../Resources/Images/Git/basic_life_cycle.png)
 
 
-
-## 6. Glossary
+## 7. Glossary
 
 - **Working tree**. A working tree is **any directory on your filesystem
   which has a repository associated with it**, typically indicated by
@@ -598,7 +597,7 @@ diagram that shows a typical project’s life-cycle:
   of that original repository's URL and thereby makes referencing much
   easier.
 
-## 7. References
+## 8. References
 
 - [Git official documnetation](https://git-scm.com/doc)
   - [Pro Git](https://git-scm.com/book/en/v2) - The book online
