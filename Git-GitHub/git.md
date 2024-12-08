@@ -40,6 +40,7 @@ is the service for projects that use Git.
   - [5.3. Summary](#53-summary)
 - [6. Git staging area (aka Index)](#6-git-staging-area-aka-index)
   - [6.1. How the staging area works](#61-how-the-staging-area-works)
+  - [6.2. Why Uue the staging area?](#62-why-uue-the-staging-area)
 - [7. Glossary](#7-glossary)
 - [8. References](#8-references)
 
@@ -552,6 +553,15 @@ diagram that shows a typical project’s life-cycle:
 
 ![basic_life_cycle](../Resources/Images/Git/basic_life_cycle.png)
 
+### 6.2. Why Uue the staging area?
+
+- **Select Specific Changes**. Allows you to choose exactly which
+  changes to include in a commit, even if other changes exist in your
+  working directory.
+- **Prepare Commits Gradually**. Lets you stage changes incrementally,
+  ensuring commits are meaningful and focused.
+- R**eview Changes**. Gives you an opportunity to inspect staged changes
+  before finalizing them into a commit.
 
 ## 7. Glossary
 
