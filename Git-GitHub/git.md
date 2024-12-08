@@ -563,6 +563,8 @@ diagram that shows a typical project’s life-cycle:
 - R**eview Changes**. Gives you an opportunity to inspect staged changes
   before finalizing them into a commit.
 
+TBD 
+
 ## 7. Glossary
 
 - **Working tree**. A working tree is **any directory on your filesystem
