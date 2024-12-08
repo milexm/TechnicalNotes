@@ -24,6 +24,7 @@ This topic contains a description of essential Git commands.
   - [4.1. Setup and configuration](#41-setup-and-configuration)
   - [4.2. Working with changes](#42-working-with-changes)
 
+
 ## 1. Squash and merge
 
 *Squash and merge* is a technique in Git **used during pull requests to
@@ -263,3 +264,4 @@ Here’s a list of essential Git commands grouped by their functionality.
 - git `add .`. Stage changes for all modified and new files.
 - `git commit -m "<message>"`. Commit staged changes with a descriptive
   message.
+
