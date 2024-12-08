@@ -38,6 +38,8 @@ is the service for projects that use Git.
   - [5.1. Commit relationships](#51-commit-relationships)
   - [5.2. Role of tree bbjects](#52-role-of-tree-bbjects)
   - [5.3. Summary](#53-summary)
+- [Git staging area (aka INdex)](#git-staging-area-aka-index)
+  - [How the staging area works](#how-the-staging-area-works)
 - [6. Glossary](#6-glossary)
 - [7. References](#7-references)
 
@@ -96,14 +98,6 @@ If you are used to the SCM (Software Configuration Management) world, put that k
     Git is very efficient. Most operations are local, which reduces
     unnecessary network overhead. Repositories are generally packed very
     efficiently, which often leads to surprisingly small repo sizes.
-
-After creating a repository, you do your work in the working tree. Once
-your work reaches a significant point, you add your changes successively
-to the index (stage). Once the index contains everything you intend to
-commit, you record its content in the repository. Here’s a simple
-diagram that shows a typical project’s life-cycle:
-
-![basic_life_cycle](../Resources/Images/Git/basic_life_cycle.png)
 
 ## 2. Git architecture
 
@@ -537,6 +531,28 @@ This structure ensures Git efficiently tracks changes by referencing
 and **rebasing**.
 
 For more information, see [Git Internals - Git Objects](https://git-scm.com/book/en/v2/Git-Internals-Git-Objects).
+
+## Git staging area (aka INdex)
+
+The Git **staging area** (also called the **index**) is a middle layer in the Git workflow that sits **between your working directory and your repository**. It plays a critical role in tracking and preparing changes for commits.
+
+### How the staging area works
+
+- **Working Directory**. The place where you make changes to your files.
+  Files in this state are untracked or modified.
+- **Staging Area**. A temporary storage area where you can group changes
+  that will be included in your next commit. Files are staged here.
+- **Repository**. The final destination for your changes when you create
+  a commit. Files here are committed.
+
+After creating a repository, you do your work in the working tree. Once
+your work reaches a significant point, you add your changes successively
+to the index (stage). Once the index contains everything you intend to
+commit, you record its content in the repository. Here’s a simple
+diagram that shows a typical project’s life-cycle:
+
+![basic_life_cycle](../Resources/Images/Git/basic_life_cycle.png)
+
 
 
 ## 6. Glossary
