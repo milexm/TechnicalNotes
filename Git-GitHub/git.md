@@ -44,6 +44,7 @@ is the service for projects that use Git.
 - [6. Git staging area (aka Index)](#6-git-staging-area-aka-index)
   - [6.1. How the staging area works](#61-how-the-staging-area-works)
   - [6.2. Why use the staging area?](#62-why-use-the-staging-area)
+
 - [7. Glossary](#7-glossary)
 - [8. References](#8-references)
 
@@ -651,7 +652,7 @@ diagram that shows a typical project’s life-cycle:
   ensuring commits are meaningful and focused.
 - R**eview Changes**. Gives you an opportunity to inspect staged changes
   before finalizing them into a commit.
-
+  
 ## 7. Glossary
 
 - **Working tree**. A working tree is **any directory on your filesystem
