@@ -245,7 +245,7 @@ To fetch updates from a remote branch and rebase instead of merging.
 
 ## 4. Essential Git commands
 
-Here’s a list of essential Git commands grouped by their functionality.
+Here is a list of essential Git commands grouped by their functionality.
 
 ### 4.1. Setup and configuration
 

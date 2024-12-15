@@ -36,12 +36,15 @@ is the service for projects that use Git.
   - [4.3. Tree](#43-tree)
 - [5. Git internals](#5-git-internals)
   - [5.1. Commit relationships](#51-commit-relationships)
-  - [5.2. Role of tree bbjects](#52-role-of-tree-bbjects)
+  - [5.2. Role of tree objects](#52-role-of-tree-objects)
   - [5.3. Summary](#53-summary)
+    - [5.3.1. Git commits trees blobs](#531-git-commits-trees-blobs)
+      - [5.3.1.1. Diagram explanation](#5311-diagram-explanation)
+      - [5.3.1.2. Git’s structure](#5312-gits-structure)
 - [6. Git staging area (aka Index)](#6-git-staging-area-aka-index)
   - [6.1. How the staging area works](#61-how-the-staging-area-works)
-  - [6.2. Why Uue the staging area?](#62-why-uue-the-staging-area)
-  - [6.3. Basic commands for staging](#63-basic-commands-for-staging)
+  - [6.2. Why use the staging area?](#62-why-use-the-staging-area)
+
 - [7. Glossary](#7-glossary)
 - [8. References](#8-references)
 
@@ -491,7 +494,7 @@ changes in the repository. Each commit contains:
 - A reference to its parent (except for the initial commit).
 - A snapshot of the repository state in the form of a tree object.
 
-### 5.2. Role of tree bbjects 
+### 5.2. Role of tree objects
 
 Tree objects are **snapshots** of the directory structure at the time of a
 commit. Each commit points to a tree object that represents:
@@ -528,8 +531,94 @@ subtrees (subdirectories). For example:
      of a file (v1, v2, v3) are stored as separate blobs.
 
 This structure ensures Git efficiently tracks changes by referencing
-**immutable** objects, enabling powerful features like **branching**, **merging**,
-and **rebasing**.
+**immutable** objects, enabling powerful features like **branching**,
+**merging**, and **rebasing**.
+
+#### 5.3.1. Git commits trees blobs
+
+The following picture shows a Git repository. The diagram illustrates the commit history; how Git structures commits, trees, blobs, and subtrees across four commits. Each change and reuse of objects is explicitly explained.
+
+```
+
+Commit 4 (HEAD, master)
+|
+|-- Tree4
+|    |
+|    |-- file1.txt (Blob2)          <-- Changed in Commit2
+|    |-- file2.txt (Blob5)
+|    |-- file3.txt (Blob3)
+|    |
+|    |-- assets/ (Tree5)            <-- New in Commit2
+|    |    |
+|    |    |-- image1.png (Blob4)
+|    |
+|    |-- docs/ (Tree6)              <-- New in Commit3
+|         |
+|         |-- readme.txt (Blob7)    <-- Changed in Commit4
+|
+Commit 3
+|
+|-- Tree3
+|    |
+|    |-- file1.txt (Blob2)
+|    |-- file2.txt (Blob5)
+|    |-- file3.txt (Blob3)
+|    |
+|    |-- assets/ (Tree5)            <-- Unchanged from Commit2
+|    |    |
+|    |    |-- image1.png (Blob4)
+|    |
+|    |-- docs/ (Tree6)              <-- New in Commit3
+|         |
+|         |-- readme.txt (Blob6)
+|
+Commit 2
+|
+|-- Tree2
+|    |
+|    |-- file1.txt (Blob2)          <-- Changed in Commit2
+|    |-- file2.txt (Blob5)          <-- Changed in Commit2
+|    |-- file3.txt (Blob3)
+|    |
+|    |-- assets/ (Tree5)            <-- New in Commit2
+|         |
+|         |-- image1.png (Blob4)
+|
+Commit 1
+|
+|-- Tree1
+     |
+     |-- file1.txt (Blob1)
+     |-- file2.txt (Blob2)
+     |-- file3.txt (Blob3)
+
+```
+
+##### 5.3.1.1. Diagram explanation
+
+1. **Commit 1**
+   - Contains 3 text files (`file1.txt`, `file2.txt`, and `file3.txt`).
+   - Each file points to its respective blob (Blob1, Blob2, Blob3).
+
+2. **Commit 2**:
+   - Updates `file1.txt` and `file2.txt`, creating new blobs (Blob2 and Blob5).
+   - Adds a new directory `assets/` containing `image1.png` (Blob4).
+
+3. **Commit 3**:
+   - Keeps all existing files unchanged.
+   - Adds a new directory `docs/` containing `readme.txt` (Blob6).
+
+4. **Commit 4**:
+   - Keeps all files unchanged except for `readme.txt` in the `docs/` directory.
+   - Updates `readme.txt` to a new blob (Blob7).
+
+##### 5.3.1.2. Git’s structure
+
+- **Blobs**: Represent the content of individual files. A new blob is created only if a file’s content changes.
+- **Trees**: Represent directories and their structure (including references to blobs and subtrees).
+- **Commits**: Represent snapshots of the project state, pointing to a single tree.
+
+This diagram shows how Git efficiently reuses blobs and trees to minimize storage redundancy.
 
 For more information, see [Git Internals - Git Objects](https://git-scm.com/book/en/v2/Git-Internals-Git-Objects).
 
@@ -554,7 +643,7 @@ diagram that shows a typical project’s life-cycle:
 
 ![basic_life_cycle](../Resources/Images/Git/basic_life_cycle.png)
 
-### 6.2. Why Uue the staging area?
+### 6.2. Why use the staging area?
 
 - **Select Specific Changes**. Allows you to choose exactly which
   changes to include in a commit, even if other changes exist in your
@@ -563,9 +652,7 @@ diagram that shows a typical project’s life-cycle:
   ensuring commits are meaningful and focused.
 - R**eview Changes**. Gives you an opportunity to inspect staged changes
   before finalizing them into a commit.
-
-### 6.3. Basic commands for staging 
-
+  
 ## 7. Glossary
 
 - **Working tree**. A working tree is **any directory on your filesystem
