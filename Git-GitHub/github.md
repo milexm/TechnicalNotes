@@ -16,7 +16,8 @@ for projects that use Git.
   - [2.1. Commit changes](#21-commit-changes)
   - [2.2. Open a Pull Request](#22-open-a-pull-request)
   - [2.3. Merge Pull Request](#23-merge-pull-request)
-- [3. References](#3-references)
+- [3. TBD](#3-tbd)
+- [4. References](#4-references)
 
 ## 1. GitHub getting started
 
@@ -144,9 +145,9 @@ To learn more about the power of **Pull Requests**, we recommend reading the [Gi
 
 Check out our other [Guides](http://guides.github.com/), [YouTube Channel](http://youtube.com/githubguides) and [On-Demand Training](https://services.github.com/on-demand/) for more on how to get started with GitHub.
 
-TBD 
+## 3. TBD 
 
-## 3. References
+## 4. References
 
 - [GitHub Desktop](https://desktop.github.com/) 
   - [GitHub Desktop Documentation](https://help.github.com/en/desktop)
