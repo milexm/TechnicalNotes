@@ -1,23 +1,11 @@
 # GitHub notes <!-- omit from toc -->
 
- **Git** is a revision control system, a **tool** to manage your source code history on your local machine. Git has a pretty steep learning curve compared to many other systems. It is a painstaking process. For more information, see [GitNotes](GitNotes.md).
-
-> [!NOTE]
-> **Git** is a revision control system, a <b>tool</b> to manage your
-source code history. <b>GitHub</b> is a hosting service for Git
-repositories. They are not the same thing: **Git is the tool, GitHub is the service for projects that use Git**.
-
-![git](../Resources/Images/GitHub/git_github.png)
-
-To shorten your GitHub file address go to
-[https://git.io/](https://git.io/). (??)
 
 ## 1. Git
 
 - [1. Git](#1-git)
 - [Git](#git)
   - [Git Getting Started](#git-getting-started)
-    - [1.1.1. Create a local Git repository via GitHub Desktop](#111-create-a-local-git-repository-via-github-desktop)
     - [1.1.2. Publish Local Git Repository to GitHub](#112-publish-local-git-repository-to-github)
     - [1.1.3. Add information to README.md](#113-add-information-to-readmemd)
 - [2. GitHub](#2-github)
@@ -47,17 +35,7 @@ The first steps you want to perform is to install **Git**.
 1. We reccomend you install the GitHub GUI client from this location: [GitHub Desktop](https://desktop.github.com/). This tool provides a very friendly GUI and seamless integration with your GitHub repositories. So, go for it!! For more information, see [GitHub Desktop Documentation](https://help.github.com/en/desktop).
 1. Alternatively, you can install the Git command line tool, refer to [Getting Started - Installing Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 
-#### 1.1.1. Create a local Git repository via GitHub Desktop
 
-1. Activate the Git client.
-2. From the File drop-down menu, select **Create a New Repository**
-3. In the popup dialog window enter the required information. 
-![create new repository](../Resources/Images/GitHub/create_new_repository_local.png)
-4. Select the **Create Repository** button. This is an example of the results: 
-![created new repository](../Resources/Images/GitHub/created_new_repository_local.png)
-5. Click the **preferences** link and enter your GitHub account information. For more information, see [Configuring Git for GitHub Desktop](https://help.github.com/en/desktop/getting-started-with-github-desktop/configuring-git-for-github-desktop).
-6. Configure your default editor. We have selected *VS Code* for our examples, as shown in the next picture. For more information, see 
-[Configuring a default editor](../Resources/Images/GitHub/created_new_repository_local.png)
 
 #### 1.1.2. Publish Local Git Repository to GitHub
 
@@ -79,7 +57,7 @@ The first steps you want to perform is to install **Git**.
 
 ## 2. GitHub
 
-[GitHub](https://github.com/) is a hosting service for Git repositories. It is a hosting platform for version control and collaboration. It allows people to work on common projects from everywhere.
+
 
 ### 2.1. GitHub getting started
 
