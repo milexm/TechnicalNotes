@@ -44,7 +44,6 @@ is the service for projects that use Git.
 - [6. Git staging area (aka Index)](#6-git-staging-area-aka-index)
   - [6.1. How the staging area works](#61-how-the-staging-area-works)
   - [6.2. Why use the staging area?](#62-why-use-the-staging-area)
-
 - [7. Glossary](#7-glossary)
 - [8. References](#8-references)
 
@@ -300,14 +299,14 @@ Starting from scratch, first you create a new repository in the directory where 
         > git hash-object greetings
         ed059abde7c93586fa6d729a31ef4bea628f37c4
 
-    > [!IMPORTANT]
-    > As you can see, the SHA1 ID has changed, because the file content
-    is changed. This is crucial for Git to wotk. Git uses the SHA1 IDs
-    to keep track of the blobs. Remember the hash ID is globally unique
-    because based on the file content. In other words, if the file
-    resides on my machine, or on yours, or in GitHub its SHA ID is
-    always the same and refers always to the same file. It is the file
-    **fingerprint**.
+  > [!IMPORTANT]
+  > As you can see, the SHA1 ID has changed, because the file content
+  is changed. This is crucial for Git to wotk. Git uses the SHA1 IDs
+  to keep track of the blobs. Remember the hash ID is globally unique
+  because based on the file content. In other words, if the file
+  resides on my machine, or on yours, or in GitHub its SHA ID is
+  always the same and refers always to the same file. It is the file
+  **fingerprint**.
 
 ### 4.2. Commit
 
