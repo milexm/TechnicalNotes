@@ -16,7 +16,6 @@ for projects that use Git.
   - [2.1. Commit changes](#21-commit-changes)
   - [2.2. Open a Pull Request](#22-open-a-pull-request)
   - [2.3. Merge Pull Request](#23-merge-pull-request)
-- [3. TBD](#3-tbd)
 - [4. References](#4-references)
 
 ## 1. GitHub getting started
@@ -144,8 +143,6 @@ In this final step, it’s time to bring your changes together by merging your *
 To learn more about the power of **Pull Requests**, we recommend reading the [GitHub flow Guide](http://guides.github.com/overviews/flow/). You might also visit [GitHub Explore](http://github.com/explore) and get involved in an Open Source project.
 
 Check out our other [Guides](http://guides.github.com/), [YouTube Channel](http://youtube.com/githubguides) and [On-Demand Training](https://services.github.com/on-demand/) for more on how to get started with GitHub.
-
-## 3. TBD 
 
 ## 4. References
 
