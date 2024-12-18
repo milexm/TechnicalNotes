@@ -82,7 +82,7 @@ Let's use branches to experiment and make edits before committing them to master
 
     The new branch is created as shown in the following figure. 
 
-    ![createD new hello word branch](../Resources/Images/GitHub/createD_new_helloworld_branch.png)
+    ![created new hello word branch](../Resources/Images/GitHub/created_new_helloworld_branch.png)
 
 1. Select **Publish branch** to store it in the remote repository. 
 
@@ -92,9 +92,11 @@ Let’s make some edits in the *helloworld* branch.
 
 1. In your browserm, go to the *Greetings* repository.
 1. In the selection bar, select **2 Branches**.
+
     ![select branch](../Resources/Images/GitHub/select_branches.png)
-    > ![NOTE]
+    > [!NOTE]
     > It says *2 Branches* because main is considered a branch too. 
+
 1. In the list of active branch, select **helloworld**.
 
    ![select helloworld branch](../Resources/Images/GitHub/select_helloworld_branch.png)
