@@ -4,7 +4,7 @@ This topic looks at errors that you might encounter when using GitHub. It also s
 
 - [1. Branch conflicts](#1-branch-conflicts)
   - [1.1. Conflct resolution](#11-conflct-resolution)
-- [2. TBD](#2-tbd)
+- [2. Resolve conflicts via command line](#2-resolve-conflicts-via-command-line)
 - [3. References](#3-references)
 
 ## 1. Branch conflicts
@@ -58,7 +58,48 @@ Visual Studio Code in this example is the default editor.
 8. You may need to create a new pull request and close the old one. 
 
 
-## 2. TBD
+## 2. Resolve conflicts via command line
+
+Follow the steps described below to resolve conflicts via command line. The steps are listed in the GitHub desktop suggestion box.
+
+1. `git pull origin master`
+
+    The command perform the following actions.
+
+    - **Fetches changes from the remote repository**
+
+        It contacts the remote repository named origin and fetches the latest changes from the branch master.
+
+    - **Merges changes into your current branch**
+
+        After fetching, it merges the changes from origin/master into your current branch (which is typically also master).
+
+        This is essentially a shorthand for running the following two commands:
+
+            git fetch origin master
+            git merge origin/master
+
+        **Key Concepts**
+
+        - `origin`. The default name for the remote repository you cloned or connected to.
+        - `master`. The name of the branch being pulled (commonly the default main branch in older Git repositories; newer ones often use main).
+        - `Pull`. Combines fetch (to get updates) and merge (to integrate those updates) into a single command.
+
+        **Considerations**
+
+        - If there are conflicts between your local changes and the remote changes, Git will pause the process and ask you to resolve the conflicts before completing the merge.
+        - To avoid an automatic merge and review changes manually, you can use `git fetch` and `git merge` separately.
+
+        **Alternative**
+
+        If you want to rebase instead of merge, you can execute the following command:
+
+            git pull --rebase origin master
+
+1. `git checkout gitgithub`
+
+The command performs a branch or commit switch in a Git repository. What happens depends on whether `gitgithub` refers to an existing branch, a tag, or a commit.
+
 
 ## 3. References
 
