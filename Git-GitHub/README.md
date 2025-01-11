@@ -13,8 +13,8 @@ more information, see [Git](../Git&GitHub/git_notes.md).
  
 ## Topics
 
-- [Git](../Git-GitHub/git.md)
+- [Git](../Git-GitHub/git.md) - Describes the **Git** revision control system
 - [Git commands](../Git-GitHub/git_commands.md)
-- [GitHub](../Git-GitHub/github_notes.md)
+- [GitHub](../Git-GitHub/github.md) - Describes the **GitHub** hosting service 
 - [GitHub error handling](../Git-GitHub/github_error_handling.md)
 - [GitHub process](../Git-GitHub/github_process.md)
