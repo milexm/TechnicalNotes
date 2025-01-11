@@ -95,6 +95,7 @@ Follow the steps described below to resolve conflicts via command line. The step
         If you want to rebase instead of merge, you can execute the following command:
 
             git pull --rebase origin master
+            
         This applies the changes from origin/master on top of your current branch, creating a linear history. 
 
 1. `git checkout gitgithub`
@@ -151,7 +152,6 @@ Follow the steps described below to resolve conflicts via command line. The step
             If both branches have unique changes, Git creates a new merge commit that combines changes from both branches.
         - **Merge conflicts**
             If changes overlap in the same file, Git pauses the merge and marks conflicts for manual resolution.
-
 
 ## 3. References
 
