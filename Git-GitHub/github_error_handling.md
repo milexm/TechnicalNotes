@@ -95,11 +95,63 @@ Follow the steps described below to resolve conflicts via command line. The step
         If you want to rebase instead of merge, you can execute the following command:
 
             git pull --rebase origin master
+            
+        This applies the changes from origin/master on top of your current branch, creating a linear history. 
 
 1. `git checkout gitgithub`
 
-The command performs a branch or commit switch in a Git repository. What happens depends on whether `gitgithub` refers to an existing branch, a tag, or a commit.
+    The command performs a branch or commit switch in a Git repository. What happens depends on whether `gitgithub` refers to an existing branch, a tag, or a commit. 
 
+   - `gitgithub` is a **branch**.
+
+       Git switches your working directory to the branch `gitgithub` and updates all files to match its state.
+       In the example `gitgithub` is a branch.
+
+       ![gitgithub_branch](../Resources/Images/GitHub/gitgithub_branch.png)
+
+       **Example**
+
+       If you previously worked on the main branch, this command switches to the branch named `gitgithub`.
+
+   - `gitgithub` is a **tag**
+
+       Git checks out the specific **commit** associated with the tag gitgithub.
+       This puts your working directory in a "**detached HEAD**" state, meaning you are not on a branch.
+
+   - `gitgithub` is a **commit hash**
+
+       Git switches your working directory to the specified commit, again in a "**detached HEAD**" state. Any changes you make will not affect any branch unless you explicitly create a new branch or reattach to an existing one.
+
+        You can verify if gitgithub is a branch or tag using the following commands:
+
+            git branch --list gitgithub
+            git tag --list gitgithub
+
+        In our example, the first command outputs the following:
+
+        ![gitgithub_branch_verify](../Resources/Images/GitHub/gitgithub_branch_verify.png)
+
+1. `git merge master`
+
+    The command merges changes from the branch named **master** into the branch you're currently working on. 
+
+    - **Current branch context**
+
+        Ensure you are on a branch where you want the master branch's changes to be applied. For example, if you're on a feature branch (feature-xyz), running this command will merge master into feature-xyz.
+
+    - **Merge process**
+
+      - Git compares the current branch's state with master and identifies the commits on master that are not already in the current branch.
+      - These changes are applied to the current branch.
+
+    - **Merge scenarios**
+
+        - **Fast-forward merge**
+            If the current branch is directly behind master and has no divergent changes, Git will simply move the branch pointer forward.
+        - **Three-Way merge**
+            If both branches have unique changes, Git creates a new merge commit that combines changes from both branches.
+        - **Merge conflicts**
+            If changes overlap in the same file, Git pauses the merge and marks conflicts for manual resolution.
 
 ## 3. References
 
