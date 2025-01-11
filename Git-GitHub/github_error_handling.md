@@ -132,7 +132,7 @@ Follow the steps described below to resolve conflicts via command line. The step
 
 1. `git merge master`
 
-    The command merges changes from the branch named **master** into the branch you're currently working on.
+    The command merges changes from the branch named **master** into the branch you're currently working on. 
 
     - **Current branch context**
 
