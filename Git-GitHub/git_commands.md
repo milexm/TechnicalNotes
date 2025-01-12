@@ -24,6 +24,12 @@ This topic contains a description of essential Git commands.
   - [4.1. Setup and configuration](#41-setup-and-configuration)
   - [4.2. Working with changes](#42-working-with-changes)
   - [4.3. Viewing history](#43-viewing-history)
+  - [4.4. Branching and merging](#44-branching-and-merging)
+  - [4.5. Remote repositories](#45-remote-repositories)
+  - [4.6. Undoing Changes](#46-undoing-changes)
+  - [4.7. Stashing](#47-stashing)
+  - [4.8. Tagging](#48-tagging)
+  - [4.9. Collaboration and Conflict Resolution](#49-collaboration-and-conflict-resolution)
 
 
 ## 1. Squash and merge
@@ -267,3 +273,47 @@ Here is a list of essential Git commands grouped by their functionality.
   message.
 
 ### 4.3. Viewing history
+
+- `git log:`. View the commit history.
+- `git log --oneline`. Show a compact version of the commit history.
+- `git diff`. Show changes between the working directory and staging area.
+- `git diff <commit>`. Compare changes with a specific commit.
+
+### 4.4. Branching and merging
+
+- `git branch`. List all branches in the repository.
+- `git branch <branch-name>`. Create a new branch.
+- `git checkout <branch-name>`. Switch to a different branch.
+- `git checkout -b <branch-name>`. Create and switch to a new branch.
+- `git merge <branch-name>`. Merge a branch into the current branch.
+
+### 4.5. Remote repositories
+
+- `git remote add <name> <url>`. Add a remote repository.
+- `git fetch`. Download changes from a remote repository without merging them.
+- `git pull`. Fetch and merge changes from a remote repository.
+- `git push <remote> <branch>`. Push changes to a remote branch.
+
+### 4.6. Undoing Changes
+
+- `git restore <file>`. Discard changes in the working directory.
+- `git reset <file>`. Unstage changes while keeping them in the working directory.
+- `git reset --hard <commit>`. Reset the repository to a specific commit and discard all changes.
+
+### 4.7. Stashing
+
+- `git stash`. Temporarily save uncommitted changes.
+- `git stash pop`. Reapply stashed changes and remove the stash.
+- `git stash list`. View a list of all stashes.
+
+### 4.8. Tagging
+
+- `git tag <tag-name>`. Create a new tag.
+- `git tag`. List all tags in the repository.
+- `git push <remote> <tag>`. Push a specific tag to a remote repository.
+
+### 4.9. Collaboration and Conflict Resolution
+
+- `git pull --rebase`. Rebase changes from a remote branch.
+- `git merge --abort`. Abort a merge in case of conflicts.
+- `git cherry-pick <commit>`. Apply changes from a specific commit to the current branch.
