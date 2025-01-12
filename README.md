@@ -7,10 +7,10 @@ Personal notes on various technical topics.
 
 ## Focus
 
-- [AI](../AI/README.md)
-- [Git/GitHub](../TechnicalNotes/Git-GitHub/README.md)
-- [Markdown](../TechnicalNotes/MarkDown/README.md)
-- [Tools](../TechnicalNotes/Tools/README.md)
+- [Artificial Intelligence](../Artificial-Intelligence/README.md)
+- [Git/GitHub](./Git-GitHub/README.md)
+- [Markdown](./MarkDown/README.md)
+- [Tools](./Tools/README.md)
 - [Python](../Python/README.md)
 
 -------------------------------------------------------------------
