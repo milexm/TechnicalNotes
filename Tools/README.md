@@ -15,7 +15,7 @@ seasoned user, GitHub Desktop simplifies your development workflow. You
 can download the desktop app at this location: [GitHub
 Desktop](https://desktop.github.com/). 
 
-See [README](../GitHub/README.md).  
+See [README](../Git-GitHub/README.md).  
 
 ## 2. Visual studio code
 
@@ -72,11 +72,11 @@ See [README](./Visual%20Studio%20Code/README.md).
    Indent](https://marketplace.visualstudio.com/items?itemName=KevinRose.vsc-python-indent).
 
 > [!NOTE]  
-> To use the Python extension you must [install a supported version of
-> Python](https://code.visualstudio.com/docs/python/python-tutorial#_prerequisites)
-> on your system (note: that the system install of Python on macOS is
-> not supported). Check that the installation works by opeing or
-> creating a Python file and start coding!
+> To use the Python extension you must install a supported version of
+> Pythonm on your system (note: that the system install of Python on macOS is
+> not supported). Check that the installation works by opening or
+> creating a Python file and start coding!. 
+> See [Install a Python interpreter](hhttps://code.visualstudio.com/docs/python/python-tutorial#_install-a-python-interpreter).
 
 > [!TIP]
 > A best practice is to use a project-specific virtual environment. Once you activate that environment, any packages you then install are isolated from other environments, including the global interpreter environment, reducing many complications that can arise from conflicting package versions. You can create non-global environments in VS Code using *Venv* or *Anaconda with Python: Create Environment*. For more informations, see [Python virtual ervironments](https://github.com/milexm/Python/blob/main/documentation/getting-started/virtual-environments.md#python-virtual-environments).
