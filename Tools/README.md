@@ -38,7 +38,9 @@ See [README](./Visual%20Studio%20Code/README.md).
    - In the file `C:\Users\miele\AppData\Roaming\Code\User\settings.json` set the following: `"markdown.extension.toc.orderedList": false` to avoid the automatic numbering of the TOC entries. Otherwise the numbering conflicts with the numbering you get when in the palette you use the command:  `Markdown All in One: Add/Update section numbers`. 
    You can get to the `settings.json` file via the *Markdown All in One settings*. Use the *Settings* gear, then look for *Omitted from Toc*, finally select the link: `Edit in settings.json`. 
    ![Edit in settings.json](../Resources/Images/MarkDown/omitted_from_TOC.png).
+
    See also the extension documentation at: [Markdown All in One Documentation](https://markdown-all-in-one.github.io/docs/).
+
 1. **markdownlint**. markdownlint is an extension for the Visual Studio
    Code editor that includes a library of rules to encourage standards
    and consistency for Markdown files.
@@ -89,3 +91,4 @@ See [README](./Visual%20Studio%20Code/README.md).
   syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#lists)
 - [Getting Started with Python in VS Code](https://code.visualstudio.com/docs/python/python-tutorial#_prerequisites)
 - [Python virtual ervironments](https://github.com/milexm/Python/blob/main/documentation/getting-started/virtual-environments.md#python-virtual-environments)
+
