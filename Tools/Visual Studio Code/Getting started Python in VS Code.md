@@ -4,7 +4,8 @@
   - [1.1. Windows](#11-windows)
 - [2. Create a virtual environment](#2-create-a-virtual-environment)
 - [3. Activate the environment](#3-activate-the-environment)
-- [4. References](#4-references)
+- [4. Hello World example](#4-hello-world-example)
+- [5. References](#5-references)
 
 ## 1. Introdcuction
 
@@ -51,6 +52,15 @@ To activate the anvironment perform the following steps:
 1. The terminal displays prompt similar to this: `(workenv) C:\GitHub\milexm\TechnicalNotes>`. The prefix `(workenv)` signifies that the selected environment is activated. 
 1. Enter `deactivate` to exit the environmnent. Conversely enter `activate` to activate the environment.
 
-## 4. References
+## 4. Hello World example
+
+Let's check now if the virtual environment is working correclty. 
+
+1. Create the `helloworld.py` Python program, as shown in [helloworld](helloworld.py).
+1. Activate the `workenv` as described before.  
+1. Open a terminal window, change directory to the one that contains the program: `(workenv) C:\GitHub\milexm\TechnicalNotes\Tools\Visual Studio Code>`.
+1. Execute the command: `python helloworld.py`.
+
+## 5. References
 
 - [Getting Started with Python in VS Code](https://code.visualstudio.com/docs/python/python-tutorial#_install-a-python-interpreter)
